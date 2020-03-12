@@ -1,0 +1,11 @@
+D:\Test\Practice\Practice.Domain\bin\Debug\netcoreapp3.1\Practice.Domain.exe
+D:\Test\Practice\Practice.Domain\bin\Debug\netcoreapp3.1\Practice.Domain.deps.json
+D:\Test\Practice\Practice.Domain\bin\Debug\netcoreapp3.1\Practice.Domain.runtimeconfig.json
+D:\Test\Practice\Practice.Domain\bin\Debug\netcoreapp3.1\Practice.Domain.runtimeconfig.dev.json
+D:\Test\Practice\Practice.Domain\bin\Debug\netcoreapp3.1\Practice.Domain.dll
+D:\Test\Practice\Practice.Domain\bin\Debug\netcoreapp3.1\Practice.Domain.pdb
+D:\Test\Practice\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.csprojAssemblyReference.cache
+D:\Test\Practice\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.AssemblyInfoInputs.cache
+D:\Test\Practice\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.AssemblyInfo.cs
+D:\Test\Practice\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.dll
+D:\Test\Practice\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.pdb

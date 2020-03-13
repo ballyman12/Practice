@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Test\\Practice\\Practice.WebAPI\\Practice.WebAPI.csproj": {}
+    "D:\\Test\\Skill\\Source\\Practice.WebAPI\\Practice.WebAPI.csproj": {}
   },
   "projects": {
-    "D:\\Test\\Practice\\Practice.WebAPI\\Practice.WebAPI.csproj": {
+    "D:\\Test\\Skill\\Source\\Practice.WebAPI\\Practice.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Test\\Practice\\Practice.WebAPI\\Practice.WebAPI.csproj",
+        "projectUniqueName": "D:\\Test\\Skill\\Source\\Practice.WebAPI\\Practice.WebAPI.csproj",
         "projectName": "Practice.WebAPI",
-        "projectPath": "D:\\Test\\Practice\\Practice.WebAPI\\Practice.WebAPI.csproj",
+        "projectPath": "D:\\Test\\Skill\\Source\\Practice.WebAPI\\Practice.WebAPI.csproj",
         "packagesPath": "C:\\Users\\skh\\.nuget\\packages\\",
-        "outputPath": "D:\\Test\\Practice\\Practice.WebAPI\\obj\\",
+        "outputPath": "D:\\Test\\Skill\\Source\\Practice.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

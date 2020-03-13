@@ -12,6 +12,6 @@ namespace Practice.Domain.Model
         public double Cost { get; set; }
         public int Unit { get; set; }
         public string Barcode { get; set; }
-        public Supplier[] Suppliers { get; set; }
+        public virtual ICollection<ItemSupplier> ItemSupplier { get; set; }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Test\\Practice\\Practice.Domain\\Practice.Domain.csproj": {}
+    "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj": {}
   },
   "projects": {
-    "D:\\Test\\Practice\\Practice.Domain\\Practice.Domain.csproj": {
+    "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Test\\Practice\\Practice.Domain\\Practice.Domain.csproj",
+        "projectUniqueName": "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj",
         "projectName": "Practice.Domain",
-        "projectPath": "D:\\Test\\Practice\\Practice.Domain\\Practice.Domain.csproj",
+        "projectPath": "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj",
         "packagesPath": "C:\\Users\\skh\\.nuget\\packages\\",
-        "outputPath": "D:\\Test\\Practice\\Practice.Domain\\obj\\",
+        "outputPath": "D:\\Test\\Skill\\Source\\Practice.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

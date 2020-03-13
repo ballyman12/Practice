@@ -6,12 +6,12 @@ using System.Text;
 
 namespace Practice.DataAccess.Implementation.Mapping
 {
-    public static class UserMap
+    public static class OrderMap
     {
-        public static ModelBuilder MapUser(this ModelBuilder modelBuilder)
+        public static ModelBuilder MapOrder(this ModelBuilder modelBuilder)
         {
-            var entity = modelBuilder.Entity<User>();
-            entity.ToTable("Users");
+            var entity = modelBuilder.Entity<Order>();
+            entity.ToTable("Orders");
             entity.Property(x => x.Id).ValueGeneratedOnAdd();
             entity.Property(x => x.Name);
             entity.Property(x => x.Description);
@@ -19,10 +19,10 @@ namespace Practice.DataAccess.Implementation.Mapping
             entity.Property(x => x.IsDeleted);
             entity.Property(x => x.IsEnabled);
 
-            entity.Property(x => x.Username).IsRequired().HasMaxLength(20);
-            entity.Property(x => x.Password).IsRequired().HasMaxLength(12);
-            entity.Property(x => x.SecurityToken).IsRequired();
-            
+            entity.HasOne(x => x.Supplier);
+
+            entity.HasMany(x => x.Items);
+
             return modelBuilder;
         }
     }

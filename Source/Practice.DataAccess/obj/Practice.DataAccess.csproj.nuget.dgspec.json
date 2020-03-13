@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Test\\Practice\\Practice.DataAccess\\Practice.DataAccess.csproj": {}
+    "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj": {}
   },
   "projects": {
-    "D:\\Test\\Practice\\Practice.DataAccess\\Practice.DataAccess.csproj": {
+    "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Test\\Practice\\Practice.DataAccess\\Practice.DataAccess.csproj",
+        "projectUniqueName": "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj",
         "projectName": "Practice.DataAccess",
-        "projectPath": "D:\\Test\\Practice\\Practice.DataAccess\\Practice.DataAccess.csproj",
+        "projectPath": "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj",
         "packagesPath": "C:\\Users\\skh\\.nuget\\packages\\",
-        "outputPath": "D:\\Test\\Practice\\Practice.DataAccess\\obj\\",
+        "outputPath": "D:\\Test\\Skill\\Source\\Practice.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Test\\Practice\\Practice.Domain\\Practice.Domain.csproj": {
-                "projectPath": "D:\\Test\\Practice\\Practice.Domain\\Practice.Domain.csproj"
+              "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj": {
+                "projectPath": "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj"
               }
             }
           }
@@ -79,14 +79,14 @@
         }
       }
     },
-    "D:\\Test\\Practice\\Practice.Domain\\Practice.Domain.csproj": {
+    "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Test\\Practice\\Practice.Domain\\Practice.Domain.csproj",
+        "projectUniqueName": "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj",
         "projectName": "Practice.Domain",
-        "projectPath": "D:\\Test\\Practice\\Practice.Domain\\Practice.Domain.csproj",
+        "projectPath": "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj",
         "packagesPath": "C:\\Users\\skh\\.nuget\\packages\\",
-        "outputPath": "D:\\Test\\Practice\\Practice.Domain\\obj\\",
+        "outputPath": "D:\\Test\\Skill\\Source\\Practice.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -10,7 +10,7 @@ namespace Practice.Domain.Model
     {
         
         public string Address { get; set; }
-        public Item[] Item { get; set; }
+        public virtual ICollection<ItemSupplier> ItemSupplier { get; set; }
         public string PhoneNo { get; set; }
     }
 }

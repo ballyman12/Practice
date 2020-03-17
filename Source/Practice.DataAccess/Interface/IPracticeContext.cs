@@ -15,6 +15,7 @@ namespace Practice.DataAccess.Interface
         DbSet<UserState> UserStates { get; set; }
         DbSet<ItemState> ItemStates { get; set; }
         DbSet<SupplierState> SupplierStates { get; set; }
-        DbSet<OrderState> OrderrStates { get; set; }
+        DbSet<OrderState> OrderStates { get; set; }
+        DbSet<ActionState> ActionStates { get; set; }
     }
 }

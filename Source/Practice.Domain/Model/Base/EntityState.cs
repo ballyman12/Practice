@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -11,6 +12,5 @@ namespace Practice.Domain.Model.Base
         public bool IsEnabled { get; set; } = true;
         public bool IsDeleted { get; set; } = false;
         public StateType Type { get; set; }
-        public ActionState Action { get; set; }
     }
 }

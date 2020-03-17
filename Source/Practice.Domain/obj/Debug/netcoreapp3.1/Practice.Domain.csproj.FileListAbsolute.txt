@@ -9,3 +9,10 @@ D:\Test\Practice\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.Assembl
 D:\Test\Practice\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.AssemblyInfo.cs
 D:\Test\Practice\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.dll
 D:\Test\Practice\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.pdb
+D:\Test\Skill\Source\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.AssemblyInfoInputs.cache
+D:\Test\Skill\Source\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.AssemblyInfo.cs
+D:\Test\Skill\Source\Practice.Domain\bin\Debug\netcoreapp3.1\Practice.Domain.deps.json
+D:\Test\Skill\Source\Practice.Domain\bin\Debug\netcoreapp3.1\Practice.Domain.dll
+D:\Test\Skill\Source\Practice.Domain\bin\Debug\netcoreapp3.1\Practice.Domain.pdb
+D:\Test\Skill\Source\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.dll
+D:\Test\Skill\Source\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.pdb

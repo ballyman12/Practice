@@ -21,7 +21,7 @@ namespace Practice.DataAccess.Implementation.Mapping
 
             entity.Property(x => x.Username).IsRequired().HasMaxLength(20);
             entity.Property(x => x.Password).IsRequired().HasMaxLength(12);
-            entity.Property(x => x.SecurityToken).IsRequired();
+            entity.Property(x => x.SecurityToken);
             
             return modelBuilder;
         }

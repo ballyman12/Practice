@@ -6,12 +6,12 @@ using System.Text;
 
 namespace Practice.DataAccess.Implementation.Mapping
 {
-    public static class ItemSupplierMap
+    public static class SupplierMap
     {
-        public static ModelBuilder MapItemSupplier(this ModelBuilder modelBuilder)
+        public static ModelBuilder MapSupplier(this ModelBuilder modelBuilder)
         {
-            var entity = modelBuilder.Entity<ItemSupplier>();
-            entity.ToTable("ItemSuppliers");
+            var entity = modelBuilder.Entity<Supplier>();
+            entity.ToTable("Suppliers");
             entity.Property(x => x.Id).ValueGeneratedOnAdd();
             entity.Property(x => x.Name);
             entity.Property(x => x.Description);
@@ -19,11 +19,8 @@ namespace Practice.DataAccess.Implementation.Mapping
             entity.Property(x => x.IsDeleted);
             entity.Property(x => x.IsEnabled);
 
-            entity.HasOne(x => x.Supplier)
-                .WithMany()
-                .HasForeignKey(x => x.SupplierId)
-                .OnDelete(DeleteBehavior.Cascade);
-
+            entity.Property(x => x.Address).IsRequired();
+            entity.Property(x => x.PhoneNo).IsRequired();
             return modelBuilder;
         }
     }

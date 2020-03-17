@@ -9,5 +9,7 @@ namespace Practice.Domain.Model
     public class UserState : EntityState
     {
         public int UserId { get; set; }
+        public ActionState Action { get; set; }
+        public int ActionStateId { get; set; }
     }
 }

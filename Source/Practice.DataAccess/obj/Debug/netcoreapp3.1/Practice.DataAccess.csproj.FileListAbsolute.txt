@@ -23,3 +23,16 @@ D:\Test\Practice\Practice.DataAccess\bin\Debug\netcoreapp3.1\Microsoft.EntityFra
 D:\Test\Practice\Practice.DataAccess\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 D:\Test\Practice\Practice.DataAccess\bin\Debug\netcoreapp3.1\Practice.Domain.pdb
 D:\Test\Practice\Practice.DataAccess\obj\Debug\netcoreapp3.1\Practice.DataAccess.csproj.CopyComplete
+D:\Test\Skill\Source\Practice.DataAccess\obj\Debug\netcoreapp3.1\Practice.DataAccess.AssemblyInfoInputs.cache
+D:\Test\Skill\Source\Practice.DataAccess\obj\Debug\netcoreapp3.1\Practice.DataAccess.AssemblyInfo.cs
+D:\Test\Skill\Source\Practice.DataAccess\bin\Debug\netcoreapp3.1\Practice.DataAccess.deps.json
+D:\Test\Skill\Source\Practice.DataAccess\bin\Debug\netcoreapp3.1\Practice.DataAccess.runtimeconfig.json
+D:\Test\Skill\Source\Practice.DataAccess\bin\Debug\netcoreapp3.1\Practice.DataAccess.runtimeconfig.dev.json
+D:\Test\Skill\Source\Practice.DataAccess\bin\Debug\netcoreapp3.1\Practice.DataAccess.dll
+D:\Test\Skill\Source\Practice.DataAccess\bin\Debug\netcoreapp3.1\Practice.DataAccess.pdb
+D:\Test\Skill\Source\Practice.DataAccess\bin\Debug\netcoreapp3.1\Practice.Domain.dll
+D:\Test\Skill\Source\Practice.DataAccess\bin\Debug\netcoreapp3.1\Practice.Domain.pdb
+D:\Test\Skill\Source\Practice.DataAccess\obj\Debug\netcoreapp3.1\Practice.DataAccess.csprojAssemblyReference.cache
+D:\Test\Skill\Source\Practice.DataAccess\obj\Debug\netcoreapp3.1\Practice.DataAccess.csproj.CopyComplete
+D:\Test\Skill\Source\Practice.DataAccess\obj\Debug\netcoreapp3.1\Practice.DataAccess.dll
+D:\Test\Skill\Source\Practice.DataAccess\obj\Debug\netcoreapp3.1\Practice.DataAccess.pdb

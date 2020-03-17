@@ -13,10 +13,11 @@ namespace Practice.DataAccess.Implementation.Seeding
             if (context.UserStates.Any()) return;
             var user = context.Users.FirstOrDefault();
            
-            var userState = context.Order.ToArray().Select(c => new UserState
+            var userState = context.Users.ToArray().Select(c => new UserState
             {
                 UserId = c.Id,
-                Type = StateType.Get
+                Type = StateType.Get,
+                ActionStateId = context.ActionStates.Select(x => x.Id).FirstOrDefault()
             });
 
             context.UserStates.AddRange(userState);

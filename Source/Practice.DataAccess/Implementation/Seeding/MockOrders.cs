@@ -11,20 +11,19 @@ namespace Practice.DataAccess.Implementation.Seeding
         public static void OrderMock(PracticeContext context)
         {
             if (context.Order.Any()) return;
-
-            context.Order.AddRange(Enumerable.Range(1, 5).Select(c => CreateOrder(c, context)));
+            
+            context.Order.AddRange(context.Items.ToArray().Take(5).Select(c => CreateOrder(c.Id, context)));
         }
 
-        public static Order CreateOrder(int i , PracticeContext context)
+        public static Order CreateOrder(int itemId, PracticeContext context)
         {
             var suppliers = context.Suppliers.ToArray();
-            var item = context.Items.ToArray();
 
             return new Order()
             {
-                Name = "Receipt_" + i,
-                Supplier = suppliers.FirstOrDefault(),
-                Items = item
+                Name = "Receipt_" + itemId,
+                SupplierId = suppliers.FirstOrDefault().Id,
+                ItemId = itemId
             };
         }
     }

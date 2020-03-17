@@ -8,7 +8,7 @@ namespace Practice.Domain.Model
 {
     public class Order : EntityDescription
     {
-        public Supplier Supplier { get; set; }
-        public Item[] Items { get; set; }
+        public int SupplierId { get; set; }
+        public int ItemId { get; set; }
     }
 }

@@ -19,9 +19,9 @@ namespace Practice.DataAccess.Implementation.Mapping
             entity.Property(x => x.IsDeleted);
             entity.Property(x => x.IsEnabled);
 
-            entity.HasOne(x => x.Supplier);
+            entity.Property(x => x.ItemId).IsRequired();
 
-            entity.HasMany(x => x.Items);
+            entity.Property(x => x.SupplierId).IsRequired();
 
             return modelBuilder;
         }

@@ -15,7 +15,8 @@ namespace Practice.DataAccess.Implementation.Seeding
             var order = context.Order.ToArray().Select(c => new OrderState
             {
                 OrderId = c.Id,
-                Type = StateType.Get
+                Type = StateType.Get,
+                ActionStateId = context.ActionStates.Select(x => x.Id).FirstOrDefault()
             });
 
             context.OrderStates.AddRange(order);

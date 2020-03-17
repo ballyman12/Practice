@@ -35,6 +35,7 @@ namespace Practice.DataAccess.Implementation
             modelBuilder.MapSupplier();
             modelBuilder.MapSupplierState();
             modelBuilder.MapItemSupplier();
+            modelBuilder.MapActionState();
 
             base.OnModelCreating(modelBuilder);
         }

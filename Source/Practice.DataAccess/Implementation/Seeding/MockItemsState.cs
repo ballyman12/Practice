@@ -16,6 +16,7 @@ namespace Practice.DataAccess.Implementation.Seeding
             {
                 ItemId = c.Id,
                 Type = StateType.Get,
+                ActionStateId = context.ActionStates.Select(x => x.Id).FirstOrDefault()
             });
 
             context.ItemStates.AddRange(item);

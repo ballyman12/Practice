@@ -9,7 +9,6 @@ namespace Practice.Domain.Model
     public class OrderState : EntityState
     {
         public int OrderId { get; set; }
-        public ActionState Action { get; set; }
         public int ActionStateId { get; set; }
     }
 }

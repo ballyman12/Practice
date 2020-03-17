@@ -16,3 +16,4 @@ D:\Test\Skill\Source\Practice.Domain\bin\Debug\netcoreapp3.1\Practice.Domain.dll
 D:\Test\Skill\Source\Practice.Domain\bin\Debug\netcoreapp3.1\Practice.Domain.pdb
 D:\Test\Skill\Source\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.dll
 D:\Test\Skill\Source\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.pdb
+D:\Test\Skill\Source\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.csprojAssemblyReference.cache

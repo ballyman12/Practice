@@ -14,7 +14,6 @@ namespace Practice.DataAccess.Implementation.Mapping
             entity.ToTable("OrderState");
             entity.Property(x => x.Id).ValueGeneratedOnAdd();
             entity.Property(x => x.Type);
-            //entity.Property(x => x.Action);
             entity.Property(x => x.IsDeleted);
             entity.Property(x => x.IsEnabled);
 

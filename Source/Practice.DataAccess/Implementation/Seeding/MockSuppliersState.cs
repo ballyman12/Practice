@@ -16,7 +16,9 @@ namespace Practice.DataAccess.Implementation.Seeding
             var supplier = context.Suppliers.ToArray().Select(c => new SupplierState
             {
                 SupplierId = c.Id,
-                Type = StateType.Get
+                Type = StateType.Get,
+                ActionStateId = context.ActionStates.Select(x => x.Id).FirstOrDefault()
+
             });
 
             context.SupplierStates.AddRange(supplier);

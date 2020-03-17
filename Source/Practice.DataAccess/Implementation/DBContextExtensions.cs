@@ -30,14 +30,20 @@ namespace Practice.DataAccess.Implementation
             {
                 MockUsers.CreateUser(context);
             }
+
+            MockActionState.ActionStateMock(context);
+
+            MockUsersState.UsersStateMock(context);
             MockSuppliers.SupplierMock(context);
-            MockItems.ItemsMock(context);
+            MockItems.ItemsMock(context);          
+            MockSuppliersState.SupplierStateMock(context);
             MockOrders.OrderMock(context);
 
             MockItemsState.ItemsStateMock(context);
+
+            
             MockOrdersState.OrdersStateMock(context);
-            MockSuppliersState.SupplierStateMock(context);
-            MockUsersState.UsersStateMock(context);
+
         }
     }
 }

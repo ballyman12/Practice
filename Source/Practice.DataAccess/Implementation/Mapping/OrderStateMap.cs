@@ -16,6 +16,8 @@ namespace Practice.DataAccess.Implementation.Mapping
             entity.Property(x => x.Type);
             entity.Property(x => x.IsDeleted);
             entity.Property(x => x.IsEnabled);
+            entity.Property(c => c.CreateDate);
+            entity.Property(c => c.UpdateDate);
 
             entity.Property(x => x.OrderId).IsRequired();
 

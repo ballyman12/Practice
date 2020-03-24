@@ -15,8 +15,10 @@ namespace Practice.DataAccess.Implementation.Seeding
                 Username = "Hello",
                 Password = "",
                 SecurityToken = "",
-                Name = "Ball"
-                
+                Name = "Ball",
+                CreateDate = DateTime.Now,
+                UpdateDate = DateTime.Now
+
             };
 
             context.Add(user);

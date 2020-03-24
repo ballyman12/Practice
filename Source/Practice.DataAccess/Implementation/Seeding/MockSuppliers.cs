@@ -16,7 +16,9 @@ namespace Practice.DataAccess.Implementation.Seeding
             {
                 Name = "Supplier_" + c,
                 Address = "Thailand",
-                PhoneNo = "084-874"+ c
+                PhoneNo = "084-874"+ c,
+                CreateDate = DateTime.Now,
+                UpdateDate = DateTime.Now
             }));
 
             context.SaveChanges();

@@ -18,6 +18,8 @@ namespace Practice.DataAccess.Implementation.Mapping
             entity.Property(x => x.Note);
             entity.Property(x => x.IsDeleted);
             entity.Property(x => x.IsEnabled);
+            entity.Property(c => c.CreateDate);
+            entity.Property(c => c.UpdateDate);
 
             entity.HasOne(x => x.Supplier)
                 .WithMany()

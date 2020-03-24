@@ -17,7 +17,9 @@ namespace Practice.DataAccess.Implementation.Seeding
             {
                 UserId = c.Id,
                 Type = StateType.Get,
-                ActionStateId = context.ActionStates.Select(x => x.Id).FirstOrDefault()
+                ActionStateId = context.ActionStates.Select(x => x.Id).FirstOrDefault(),
+                CreateDate = DateTime.Now,
+                UpdateDate = DateTime.Now
             });
 
             context.UserStates.AddRange(userState);

@@ -12,18 +12,25 @@ namespace Practice.DataAccess.Implementation.Seeding
         {
             if (context.Order.Any()) return;
             
-            context.Order.AddRange(context.Items.ToArray().Take(5).Select(c => CreateOrder(c.Id, context)));
+            context.Order.AddRange(Enumerable.Range(1,5).Select(c => CreateOrder(c , context)));
+            context.SaveChanges();
         }
 
-        public static Order CreateOrder(int itemId, PracticeContext context)
+        public static Order CreateOrder(int Id, PracticeContext context)
         {
             var suppliers = context.Suppliers.ToArray();
 
             return new Order()
             {
-                Name = "Receipt_" + itemId,
+                Name = "Receipt_" + Id,
                 SupplierId = suppliers.FirstOrDefault().Id,
-                ItemId = itemId
+                OrderItems = context.Items.Take(3).Select(c => new OrderItem
+                {
+                    Item = c
+                }).ToList(),
+                CreateDate = DateTime.Now,
+                UpdateDate = DateTime.Now
+
             };
         }
     }

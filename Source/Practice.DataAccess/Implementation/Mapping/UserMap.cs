@@ -18,6 +18,8 @@ namespace Practice.DataAccess.Implementation.Mapping
             entity.Property(x => x.Note);
             entity.Property(x => x.IsDeleted);
             entity.Property(x => x.IsEnabled);
+            entity.Property(c => c.CreateDate);
+            entity.Property(c => c.UpdateDate);
 
             entity.Property(x => x.Username).IsRequired().HasMaxLength(20);
             entity.Property(x => x.Password).IsRequired().HasMaxLength(12);

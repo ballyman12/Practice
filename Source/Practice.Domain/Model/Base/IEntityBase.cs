@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 
 namespace Practice.Domain.Model.Base
 {
-    public interface EntityBase
+    public interface IEntityBase
     {
         int Id { get; set; }
+        DateTime CreateDate { get; set; }
+        DateTime UpdateDate { get; set; }
     }
 }

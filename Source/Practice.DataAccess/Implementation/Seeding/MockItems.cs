@@ -13,6 +13,7 @@ namespace Practice.DataAccess.Implementation.Seeding
             if (context.Items.Any()) return;
 
             context.Items.AddRange(Enumerable.Range(1, 5).Select(c => CreateItems(c, context)));
+            context.SaveChanges();
         }
 
         public static Item CreateItems(int i , PracticeContext practiceContext)
@@ -30,7 +31,9 @@ namespace Practice.DataAccess.Implementation.Seeding
                 ItemSupplier = practiceContext.Suppliers.Take(2).Select(c => new ItemSupplier
                 {
                     Supplier = c
-                }).ToList()
+                }).ToList(),
+                CreateDate = DateTime.Now,
+                UpdateDate = DateTime.Now
             };
         }
     }

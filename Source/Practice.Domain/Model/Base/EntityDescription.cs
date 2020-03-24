@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Practice.Domain.Model.Base
 {
-    abstract public class EntityDescription : EntityBase, EntityStatus
+    abstract public class EntityDescription : IEntityBase, IEntityStatus
     {
         public int Id { get; set; }
         public bool IsEnabled { get; set; } = true ;
@@ -13,5 +13,7 @@ namespace Practice.Domain.Model.Base
         public string Name { get; set; }
         public string Description { get; set; }
         public string Note { get; set; }
+        public DateTime CreateDate { get; set; }
+        public DateTime UpdateDate { get; set; }
     }
 }

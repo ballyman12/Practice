@@ -21,6 +21,7 @@ namespace Practice.DataAccess.Implementation.Seeding
             };
 
             context.ActionStates.Add(action);
+            context.SaveChanges();
         }
     }
 }

@@ -1,0 +1,15 @@
+D:\Test\Skill\Source\Practice.IoC\bin\Debug\netcoreapp3.1\Practice.IoC.deps.json
+D:\Test\Skill\Source\Practice.IoC\bin\Debug\netcoreapp3.1\Practice.IoC.dll
+D:\Test\Skill\Source\Practice.IoC\bin\Debug\netcoreapp3.1\Practice.IoC.pdb
+D:\Test\Skill\Source\Practice.IoC\bin\Debug\netcoreapp3.1\Practice.DataAccess.dll
+D:\Test\Skill\Source\Practice.IoC\bin\Debug\netcoreapp3.1\Practice.Domain.dll
+D:\Test\Skill\Source\Practice.IoC\bin\Debug\netcoreapp3.1\Practice.Repository.dll
+D:\Test\Skill\Source\Practice.IoC\bin\Debug\netcoreapp3.1\Practice.DataAccess.pdb
+D:\Test\Skill\Source\Practice.IoC\bin\Debug\netcoreapp3.1\Practice.Repository.pdb
+D:\Test\Skill\Source\Practice.IoC\bin\Debug\netcoreapp3.1\Practice.Domain.pdb
+D:\Test\Skill\Source\Practice.IoC\obj\Debug\netcoreapp3.1\Practice.IoC.csprojAssemblyReference.cache
+D:\Test\Skill\Source\Practice.IoC\obj\Debug\netcoreapp3.1\Practice.IoC.AssemblyInfoInputs.cache
+D:\Test\Skill\Source\Practice.IoC\obj\Debug\netcoreapp3.1\Practice.IoC.AssemblyInfo.cs
+D:\Test\Skill\Source\Practice.IoC\obj\Debug\netcoreapp3.1\Practice.IoC.csproj.CopyComplete
+D:\Test\Skill\Source\Practice.IoC\obj\Debug\netcoreapp3.1\Practice.IoC.dll
+D:\Test\Skill\Source\Practice.IoC\obj\Debug\netcoreapp3.1\Practice.IoC.pdb

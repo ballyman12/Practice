@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Practice.Domain.Model
 {
-    public class ActionState : EntityBase
+    public class ActionState
     {
         public int By { get; set; }
         public long On { get; set; }

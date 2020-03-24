@@ -23,6 +23,7 @@ namespace Practice.DataAccess.Implementation
         public DbSet<SupplierState> SupplierStates { get; set; }
         public DbSet<OrderState> OrderStates { get; set; }
         public DbSet<ActionState> ActionStates { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -36,6 +37,7 @@ namespace Practice.DataAccess.Implementation
             modelBuilder.MapSupplierState();
             modelBuilder.MapItemSupplier();
             modelBuilder.MapActionState();
+            modelBuilder.MapOrderItem();
 
             base.OnModelCreating(modelBuilder);
         }

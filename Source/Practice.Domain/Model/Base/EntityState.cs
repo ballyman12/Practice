@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Practice.Domain.Model.Base
 {
-    abstract public class EntityState : EntityBase, EntityStatus
+    abstract public class EntityState : IEntityBase, IEntityStatus
     {
         public int Id { get ; set ; }
         public bool IsEnabled { get; set; } = true;
         public bool IsDeleted { get; set; } = false;
         public StateType Type { get; set; }
+        public  DateTime CreateDate { get; set; }
+        public  DateTime UpdateDate { get; set; }
     }
 }

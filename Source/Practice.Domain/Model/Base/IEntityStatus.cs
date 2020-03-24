@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Practice.Domain.Model.Base
 {
-    public interface EntityStatus
+    public interface IEntityStatus
     {
         bool IsEnabled { get; set; }
         bool IsDeleted { get; set; }

@@ -16,7 +16,9 @@ namespace Practice.DataAccess.Implementation.Seeding
             {
                 OrderId = c.Id,
                 Type = StateType.Get,
-                ActionStateId = context.ActionStates.Select(x => x.Id).FirstOrDefault()
+                ActionStateId = context.ActionStates.Select(x => x.Id).FirstOrDefault(),
+                CreateDate = DateTime.Now,
+                UpdateDate = DateTime.Now
             });
 
             context.OrderStates.AddRange(order);

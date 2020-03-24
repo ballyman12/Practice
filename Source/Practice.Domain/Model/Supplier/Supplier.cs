@@ -8,9 +8,24 @@ namespace Practice.Domain.Model
 {
     public class Supplier : EntityDescription
     {
-        
         public string Address { get; set; }
-        //public virtual ICollection<ItemSupplier> ItemSupplier { get; set; }
         public string PhoneNo { get; set; }
+        public SupplierDTO ToDTO()
+        {
+            return new SupplierDTO
+            {
+                SupplierId = Id,
+                SupplierName = Name,
+                SupplierAddress = Address,
+                SupplierPhone = PhoneNo
+            };
+        }
+    }
+    public class SupplierDTO
+    {
+        public int SupplierId { get; set; }
+        public string SupplierName { get; set; }
+        public string SupplierAddress { get; set; }
+        public string SupplierPhone { get; set; }
     }
 }

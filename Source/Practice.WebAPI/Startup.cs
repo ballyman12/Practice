@@ -13,6 +13,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Practice.DataAccess.Implementation;
+using Practice.IoC;
+using StructureMap;
 
 namespace Practice.WebAPI
 {
@@ -26,11 +28,23 @@ namespace Practice.WebAPI
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
                 services.AddDbContext<PracticeContext>
                (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            return this.ConfigureIoC(services);
+        }
+        public virtual IServiceProvider ConfigureIoC(IServiceCollection services)
+        {
+            var container = new Container();
+            container.Configure(config =>
+            {
+                config.AddRegistry(new SimpleIoCRegistry());
+                config.Populate(services);
+            });
+            return container.GetInstance<IServiceProvider>();
         }
 
         private DbContextOptions GetOptions(string connectionString)

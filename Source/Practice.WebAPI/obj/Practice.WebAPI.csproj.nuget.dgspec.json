@@ -58,6 +58,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.2, )"
+            },
+            "StructureMap.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "structuremap": {
+              "target": "Package",
+              "version": "[4.7.1, )"
             }
           },
           "imports": [
@@ -115,6 +123,160 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "StructureMap.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "structuremap": {
+              "target": "Package",
+              "version": "[4.7.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Test\\Skill\\Source\\Practice.IoC\\Practice.IoC.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Test\\Skill\\Source\\Practice.IoC\\Practice.IoC.csproj",
+        "projectName": "Practice.IoC",
+        "projectPath": "D:\\Test\\Skill\\Source\\Practice.IoC\\Practice.IoC.csproj",
+        "packagesPath": "C:\\Users\\skh\\.nuget\\packages\\",
+        "outputPath": "D:\\Test\\Skill\\Source\\Practice.IoC\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\skh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj": {
+                "projectPath": "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj"
+              },
+              "D:\\Test\\Skill\\Source\\Practice.Repository\\Practice.Repository.csproj": {
+                "projectPath": "D:\\Test\\Skill\\Source\\Practice.Repository\\Practice.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "StructureMap.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "structuremap": {
+              "target": "Package",
+              "version": "[4.7.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Test\\Skill\\Source\\Practice.Repository\\Practice.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Test\\Skill\\Source\\Practice.Repository\\Practice.Repository.csproj",
+        "projectName": "Practice.Repository",
+        "projectPath": "D:\\Test\\Skill\\Source\\Practice.Repository\\Practice.Repository.csproj",
+        "packagesPath": "C:\\Users\\skh\\.nuget\\packages\\",
+        "outputPath": "D:\\Test\\Skill\\Source\\Practice.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\skh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj": {
+                "projectPath": "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj"
+              },
+              "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj": {
+                "projectPath": "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "StructureMap.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "structuremap": {
+              "target": "Package",
+              "version": "[4.7.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -165,6 +327,12 @@
               },
               "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj": {
                 "projectPath": "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj"
+              },
+              "D:\\Test\\Skill\\Source\\Practice.IoC\\Practice.IoC.csproj": {
+                "projectPath": "D:\\Test\\Skill\\Source\\Practice.IoC\\Practice.IoC.csproj"
+              },
+              "D:\\Test\\Skill\\Source\\Practice.Repository\\Practice.Repository.csproj": {
+                "projectPath": "D:\\Test\\Skill\\Source\\Practice.Repository\\Practice.Repository.csproj"
               }
             }
           }
@@ -184,9 +352,21 @@
               "target": "Package",
               "version": "[3.1.2, )"
             },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "StructureMap.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.1, )"
+            },
+            "structuremap": {
+              "target": "Package",
+              "version": "[4.7.1, )"
             }
           },
           "imports": [

@@ -58,6 +58,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.2, )"
+            },
+            "StructureMap.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "structuremap": {
+              "target": "Package",
+              "version": "[4.7.1, )"
             }
           },
           "imports": [
@@ -115,6 +123,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "StructureMap.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "structuremap": {
+              "target": "Package",
+              "version": "[4.7.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -72,4 +72,5 @@ D:\Test\Skill\Source\Practice.WebAPI\obj\Debug\netcoreapp3.1\Practice.WebAPI.csp
 D:\Test\Skill\Source\Practice.WebAPI\obj\Debug\netcoreapp3.1\Practice.WebAPI.dll
 D:\Test\Skill\Source\Practice.WebAPI\obj\Debug\netcoreapp3.1\Practice.WebAPI.pdb
 D:\Test\Skill\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-D:\Test\Skill\Source\Practice.WebAPI\obj\Debug\netcoreapp3.1\Practice.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\Test\Skill\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\StructureMap.dll
+D:\Test\Skill\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\StructureMap.Microsoft.DependencyInjection.dll

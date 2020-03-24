@@ -9,7 +9,7 @@ namespace Practice.Repository.Interface
     {
         Task<IList<T>> GetList();
         Task<T> GetById(int internalId);
-        Task<T> Updaye(T item);
+        Task<T> Update(T item);
         Task<T> Save(T item);
         void Delete(int internalId);
     }

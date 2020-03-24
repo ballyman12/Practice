@@ -1291,6 +1291,21 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Practice.BusinessLogic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Practice.DataAccess": "1.0.0",
+          "Practice.Domain": "1.0.0",
+          "Practice.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Practice.BusinessLogic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Practice.BusinessLogic.dll": {}
+        }
+      },
       "Practice.DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -5061,6 +5076,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Practice.BusinessLogic/1.0.0": {
+      "type": "project",
+      "path": "../Practice.BusinessLogic/Practice.BusinessLogic.csproj",
+      "msbuildProject": "../Practice.BusinessLogic/Practice.BusinessLogic.csproj"
+    },
     "Practice.DataAccess/1.0.0": {
       "type": "project",
       "path": "../Practice.DataAccess/Practice.DataAccess.csproj",
@@ -5079,6 +5099,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Practice.BusinessLogic >= 1.0.0",
       "Practice.DataAccess >= 1.0.0",
       "Practice.Repository >= 1.0.0",
       "StructureMap.Microsoft.DependencyInjection >= 2.0.0",
@@ -5115,6 +5136,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "D:\\Test\\Skill\\Source\\Practice.BusinessLogic\\Practice.BusinessLogic.csproj": {
+              "projectPath": "D:\\Test\\Skill\\Source\\Practice.BusinessLogic\\Practice.BusinessLogic.csproj"
+            },
             "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj": {
               "projectPath": "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj"
             },

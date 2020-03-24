@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice.Domain", "Practice
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice.DataAccess", "Practice.DataAccess\Practice.DataAccess.csproj", "{9B039F46-6CC3-41F3-8DD3-732EF465D944}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice.Repository", "Practice.Repository\Practice.Repository.csproj", "{93340EDE-862D-4DD3-AF63-FB5BEEB6C0DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice.Repository", "Practice.Repository\Practice.Repository.csproj", "{93340EDE-862D-4DD3-AF63-FB5BEEB6C0DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice.IoC", "Practice.IoC\Practice.IoC.csproj", "{DEAE0871-0167-46D1-8784-D4626DD9437A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice.IoC", "Practice.IoC\Practice.IoC.csproj", "{DEAE0871-0167-46D1-8784-D4626DD9437A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice.BusinessLogic", "Practice.BusinessLogic\Practice.BusinessLogic.csproj", "{F872EB47-0233-4F99-900E-1CDEAAAF9161}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{DEAE0871-0167-46D1-8784-D4626DD9437A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEAE0871-0167-46D1-8784-D4626DD9437A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEAE0871-0167-46D1-8784-D4626DD9437A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F872EB47-0233-4F99-900E-1CDEAAAF9161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F872EB47-0233-4F99-900E-1CDEAAAF9161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F872EB47-0233-4F99-900E-1CDEAAAF9161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F872EB47-0233-4F99-900E-1CDEAAAF9161}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

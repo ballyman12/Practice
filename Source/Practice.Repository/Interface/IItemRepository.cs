@@ -8,6 +8,6 @@ namespace Practice.Repository.Interface
 {
     public interface IItemRepository : IRepositoryBase<Item>
     {
-
+        Task<IList<Item>> GetAllItems();
     }
 }

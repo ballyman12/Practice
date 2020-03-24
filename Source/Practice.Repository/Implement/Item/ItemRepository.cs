@@ -22,6 +22,11 @@ namespace Practice.Repository.Implement
             throw new NotImplementedException();
         }
 
+        public async Task<IList<Item>> GetAllItems()
+        {
+            return await practiceContext.Items.ToListAsync();
+        }
+
         public Task<Item> GetById(int internalId)
         {
             throw new NotImplementedException();

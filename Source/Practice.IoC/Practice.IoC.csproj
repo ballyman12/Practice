@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Practice.BusinessLogic\Practice.BusinessLogic.csproj" />
     <ProjectReference Include="..\Practice.DataAccess\Practice.DataAccess.csproj" />
     <ProjectReference Include="..\Practice.Repository\Practice.Repository.csproj" />
   </ItemGroup>

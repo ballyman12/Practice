@@ -34,5 +34,29 @@ namespace Practice.WebAPI.Controllers
            
         }
 
+        [HttpGet("GetItemById/{itemId}")]
+        public async Task<ActionResult<APIResponseWrapper<ItemDTO>>> GetItemById(int itemId)
+        {
+            var item = await itemBusinessLogic.GetItemById(itemId);
+
+            if (item == null) return NotFound();
+
+            var itemDTO = item.ToDTO();
+
+            return APIResponseWrapper<ItemDTO>.StatusComplete(itemDTO);
+        }
+
+        [HttpPost("Create-new-item")]
+        public ActionResult<APIResponseWrapper<ItemDTO>> CreateItem(ItemDTO item)
+        {
+            if(item != null)
+            {
+                return APIResponseWrapper<ItemDTO>.StatusComplete(item);
+            }
+
+            return BadRequest("Error");
+        }
+
+
     }
 }

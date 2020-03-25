@@ -24,6 +24,10 @@ namespace Practice.BusinessLogic.Implement
         {
             return await itemRepository.GetAllItems();
         }
+        public async Task<Item> GetItemById(int itemId)
+        {
+            return await itemRepository.GetItemById(itemId);
+        }
 
         public Task<Item> GetById(int internalId)
         {
@@ -43,6 +47,22 @@ namespace Practice.BusinessLogic.Implement
         public Task<Item> Update(Item item)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<Item> CreateItem(ItemDTO item)
+        {
+            if (item == null) return null;
+
+            var _item = new Item
+            {
+                Name = item.ItemName,
+                SKU = item.SKU,
+                Cost = item.Cost,
+                Unit = item.Unit,
+                Barcode = item.Barcode
+            };
+
+            return await itemRepository.CreateItem(_item);
         }
     }
 }

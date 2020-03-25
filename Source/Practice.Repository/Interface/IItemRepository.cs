@@ -9,5 +9,7 @@ namespace Practice.Repository.Interface
     public interface IItemRepository : IRepositoryBase<Item>
     {
         Task<IList<Item>> GetAllItems();
+        Task<Item> GetItemById(int itemId);
+        Task<Item> CreateItem(Item item);
     }
 }

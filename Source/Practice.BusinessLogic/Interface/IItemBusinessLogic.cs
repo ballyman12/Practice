@@ -9,5 +9,7 @@ namespace Practice.BusinessLogic.Interface
     public interface IItemBusinessLogic : IBusinessLogicBase<Item>
     {
         Task<IList<Item>> GetAllItems();
+        Task<Item> GetItemById(int itemId);
+        Task<Item> CreateItem(ItemDTO item);
     }
 }

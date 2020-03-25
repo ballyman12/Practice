@@ -26,11 +26,26 @@ namespace Practice.Repository.Implement
         {
             return await practiceContext.Items.ToListAsync();
         }
+        public async Task<Item> GetItemById(int itemId)
+        {
+            return await practiceContext.Items.FirstOrDefaultAsync(x => x.Id == itemId);
+        }
+        public async Task<Item> CreateItem(Item item)
+        {
+            if (item == null) return new Item();
+
+            practiceContext.Items.Add(item);
+            practiceContext.SaveChanges();
+
+            return await GetItemById(item.Id);
+        }
 
         public Task<Item> GetById(int internalId)
         {
             throw new NotImplementedException();
         }
+
+        
 
         public async Task<IList<Item>> GetList()
         {

@@ -1,0 +1,13 @@
+D:\Test\Skill\Source\Practice.Repository\bin\Debug\netcoreapp2.2\Practice.Repository.deps.json
+D:\Test\Skill\Source\Practice.Repository\bin\Debug\netcoreapp2.2\Practice.Repository.dll
+D:\Test\Skill\Source\Practice.Repository\bin\Debug\netcoreapp2.2\Practice.Repository.pdb
+D:\Test\Skill\Source\Practice.Repository\bin\Debug\netcoreapp2.2\Practice.DataAccess.dll
+D:\Test\Skill\Source\Practice.Repository\bin\Debug\netcoreapp2.2\Practice.Domain.dll
+D:\Test\Skill\Source\Practice.Repository\bin\Debug\netcoreapp2.2\Practice.DataAccess.pdb
+D:\Test\Skill\Source\Practice.Repository\bin\Debug\netcoreapp2.2\Practice.Domain.pdb
+D:\Test\Skill\Source\Practice.Repository\obj\Debug\netcoreapp2.2\Practice.Repository.csprojAssemblyReference.cache
+D:\Test\Skill\Source\Practice.Repository\obj\Debug\netcoreapp2.2\Practice.Repository.AssemblyInfoInputs.cache
+D:\Test\Skill\Source\Practice.Repository\obj\Debug\netcoreapp2.2\Practice.Repository.AssemblyInfo.cs
+D:\Test\Skill\Source\Practice.Repository\obj\Debug\netcoreapp2.2\Practice.Repository.csproj.CopyComplete
+D:\Test\Skill\Source\Practice.Repository\obj\Debug\netcoreapp2.2\Practice.Repository.dll
+D:\Test\Skill\Source\Practice.Repository\obj\Debug\netcoreapp2.2\Practice.Repository.pdb

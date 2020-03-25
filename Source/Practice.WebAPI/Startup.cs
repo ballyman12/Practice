@@ -12,9 +12,15 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
+using Practice.BusinessLogic.Implement;
+using Practice.BusinessLogic.Interface;
 using Practice.DataAccess.Implementation;
 using Practice.IoC;
+using Practice.Repository.Implement;
+using Practice.Repository.Interface;
 using StructureMap;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Practice.WebAPI
 {
@@ -28,15 +34,23 @@ namespace Practice.WebAPI
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public IServiceProvider ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
                 services.AddDbContext<PracticeContext>
                (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            return this.ConfigureIoC(services);
+            //this.ConfigureIoC(services);
+
+            services.AddTransient<IItemRepository, ItemRepository>();
+            services.AddTransient<IItemBusinessLogic, ItemBusinessLogic>();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+            });
         }
-        public virtual IServiceProvider ConfigureIoC(IServiceCollection services)
+        public virtual void ConfigureIoC(IServiceCollection services)
         {
             var container = new Container();
             container.Configure(config =>
@@ -44,7 +58,7 @@ namespace Practice.WebAPI
                 config.AddRegistry(new SimpleIoCRegistry());
                 config.Populate(services);
             });
-            return container.GetInstance<IServiceProvider>();
+            container.GetInstance<IServiceProvider>();
         }
 
         private DbContextOptions GetOptions(string connectionString)
@@ -84,6 +98,15 @@ namespace Practice.WebAPI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
             });
         }
     }

@@ -14,7 +14,7 @@ namespace Practice.WebAPI.Controllers
     [ApiController]
     public class ItemsController : ControllerBase
     {
-        private readonly IItemBusinessLogic itemBusinessLogic;
+        private IItemBusinessLogic itemBusinessLogic { get; }
         public ItemsController(IItemBusinessLogic itemBusinessLogic)
         {
             this.itemBusinessLogic = itemBusinessLogic;

@@ -153,4 +153,9 @@ D:\Test\Skill\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAn
 D:\Test\Skill\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Test\Skill\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Test\Skill\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\Practice.BusinessLogic.pdb
+D:\Test\Skill\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\Test\Skill\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Test\Skill\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Test\Skill\Source\Practice.WebAPI\obj\Debug\netcoreapp3.1\Practice.WebAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\Test\Skill\Source\Practice.WebAPI\obj\Debug\netcoreapp3.1\Practice.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\Test\Skill\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll

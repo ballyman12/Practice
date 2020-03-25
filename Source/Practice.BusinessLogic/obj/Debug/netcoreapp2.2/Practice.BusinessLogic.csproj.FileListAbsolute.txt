@@ -1,0 +1,15 @@
+D:\Test\Skill\Source\Practice.BusinessLogic\bin\Debug\netcoreapp2.2\Practice.BusinessLogic.deps.json
+D:\Test\Skill\Source\Practice.BusinessLogic\bin\Debug\netcoreapp2.2\Practice.BusinessLogic.dll
+D:\Test\Skill\Source\Practice.BusinessLogic\bin\Debug\netcoreapp2.2\Practice.BusinessLogic.pdb
+D:\Test\Skill\Source\Practice.BusinessLogic\bin\Debug\netcoreapp2.2\Practice.DataAccess.dll
+D:\Test\Skill\Source\Practice.BusinessLogic\bin\Debug\netcoreapp2.2\Practice.Domain.dll
+D:\Test\Skill\Source\Practice.BusinessLogic\bin\Debug\netcoreapp2.2\Practice.Repository.dll
+D:\Test\Skill\Source\Practice.BusinessLogic\bin\Debug\netcoreapp2.2\Practice.DataAccess.pdb
+D:\Test\Skill\Source\Practice.BusinessLogic\bin\Debug\netcoreapp2.2\Practice.Domain.pdb
+D:\Test\Skill\Source\Practice.BusinessLogic\bin\Debug\netcoreapp2.2\Practice.Repository.pdb
+D:\Test\Skill\Source\Practice.BusinessLogic\obj\Debug\netcoreapp2.2\Practice.BusinessLogic.csprojAssemblyReference.cache
+D:\Test\Skill\Source\Practice.BusinessLogic\obj\Debug\netcoreapp2.2\Practice.BusinessLogic.AssemblyInfoInputs.cache
+D:\Test\Skill\Source\Practice.BusinessLogic\obj\Debug\netcoreapp2.2\Practice.BusinessLogic.AssemblyInfo.cs
+D:\Test\Skill\Source\Practice.BusinessLogic\obj\Debug\netcoreapp2.2\Practice.BusinessLogic.csproj.CopyComplete
+D:\Test\Skill\Source\Practice.BusinessLogic\obj\Debug\netcoreapp2.2\Practice.BusinessLogic.dll
+D:\Test\Skill\Source\Practice.BusinessLogic\obj\Debug\netcoreapp2.2\Practice.BusinessLogic.pdb

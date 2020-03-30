@@ -1,4 +1,5 @@
-﻿using Practice.Domain.Model;
+﻿using Practice.BusinessLogic.Command.Result;
+using Practice.Domain.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,6 +11,6 @@ namespace Practice.BusinessLogic.Interface
     {
         Task<IList<Item>> GetAllItems();
         Task<Item> GetItemById(int itemId);
-        Task<Item> CreateItem(ItemDTO item);
+        Task<CommandResult> CreateItem(ItemDTO item);
     }
 }

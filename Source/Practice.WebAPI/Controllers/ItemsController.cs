@@ -4,7 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Practice.BusinessLogic.Command.Interface;
+using Practice.BusinessLogic.Command.Result;
 using Practice.BusinessLogic.Interface;
+using Practice.BusinessLogic.Validation;
+using Practice.BusinessLogic.Validation.Result;
 using Practice.Domain.Model;
 using Practice.WebAPI.Helpers;
 
@@ -12,9 +16,10 @@ namespace Practice.WebAPI.Controllers
 {
     [Route("api/Items")]
     [ApiController]
-    public class ItemsController : ControllerBase
+    public class ItemsController : BaseController
     {
         private IItemBusinessLogic itemBusinessLogic { get; }
+
         public ItemsController(IItemBusinessLogic itemBusinessLogic)
         {
             this.itemBusinessLogic = itemBusinessLogic;
@@ -31,7 +36,7 @@ namespace Practice.WebAPI.Controllers
             var itemResult = APIResponseWrapper<ItemDTO[]>.StatusComplete(itemDTO);
 
             return itemResult;
-           
+
         }
 
         [HttpGet("GetItemById/{itemId}")]
@@ -47,14 +52,33 @@ namespace Practice.WebAPI.Controllers
         }
 
         [HttpPost("Create-new-item")]
-        public ActionResult<APIResponseWrapper<ItemDTO>> CreateItem(ItemDTO item)
+        public async Task<ActionResult<APIResponseWrapper<ItemDTO>>> CreateItem(ItemDTO item)
         {
-            if(item != null)
+            IValidationBase<ItemDTO> itemValidation = new ItemValidation();
+            ValidationResult validationResult = itemValidation.Validate(item);
+
+            
+            if (!validationResult.IsValid)
+                return APIResponse<ItemDTO>(validationResult);
+            if (validationResult.IsValid)
             {
-                return APIResponseWrapper<ItemDTO>.StatusComplete(item);
+                var result = await itemBusinessLogic.CreateItem(item);
+                if(!result.Success)
+                    return APIResponse<ItemDTO>(result , StatusCodes.Status400BadRequest);
+
             }
 
-            return BadRequest("Error");
+
+            return APIResponse(
+                new ItemDTO()
+                {
+                    ItemId = item.ItemId,
+                    ItemName = item.ItemName,
+                    Cost = item.Cost,
+                    Unit = item.Unit,
+                    SKU = item.SKU,
+                    Barcode = item.Barcode
+                });
         }
 
 

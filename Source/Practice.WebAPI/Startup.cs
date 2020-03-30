@@ -15,7 +15,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Practice.BusinessLogic.Implement;
 using Practice.BusinessLogic.Interface;
+using Practice.BusinessLogic.Validation;
 using Practice.DataAccess.Implementation;
+using Practice.DataAccess.Interface;
 using Practice.IoC;
 using Practice.Repository.Implement;
 using Practice.Repository.Interface;
@@ -42,8 +44,10 @@ namespace Practice.WebAPI
 
             //this.ConfigureIoC(services);
 
+            services.AddTransient<IPracticeContext, PracticeContext>();
             services.AddTransient<IItemRepository, ItemRepository>();
             services.AddTransient<IItemBusinessLogic, ItemBusinessLogic>();
+            services.AddTransient<ItemValidation>();
 
             services.AddSwaggerGen(c =>
             {

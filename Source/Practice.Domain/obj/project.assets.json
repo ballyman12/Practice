@@ -888,7 +888,6 @@
       "path": "system.reflection.emit.ilgeneration/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -933,7 +932,6 @@
       "path": "system.reflection.emit.lightweight/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1569,23 +1567,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\skh\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\BalLy'\\.nuget\\packages\\": {},
+    "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj",
+      "projectUniqueName": "N:\\Work\\Training\\Practice\\Source\\Practice.Domain\\Practice.Domain.csproj",
       "projectName": "Practice.Domain",
-      "projectPath": "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj",
-      "packagesPath": "C:\\Users\\skh\\.nuget\\packages\\",
-      "outputPath": "D:\\Test\\Skill\\Source\\Practice.Domain\\obj\\",
+      "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.Domain\\Practice.Domain.csproj",
+      "packagesPath": "C:\\Users\\BalLy'\\.nuget\\packages\\",
+      "outputPath": "N:\\Work\\Training\\Practice\\Source\\Practice.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\skh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\BalLy'\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1633,7 +1631,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

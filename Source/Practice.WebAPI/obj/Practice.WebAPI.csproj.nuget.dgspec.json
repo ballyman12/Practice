@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Test\\Skill\\Source\\Practice.WebAPI\\Practice.WebAPI.csproj": {}
+    "N:\\Work\\Training\\Practice\\Source\\Practice.WebAPI\\Practice.WebAPI.csproj": {}
   },
   "projects": {
-    "D:\\Test\\Skill\\Source\\Practice.BusinessLogic\\Practice.BusinessLogic.csproj": {
+    "N:\\Work\\Training\\Practice\\Source\\Practice.BusinessLogic\\Practice.BusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Test\\Skill\\Source\\Practice.BusinessLogic\\Practice.BusinessLogic.csproj",
+        "projectUniqueName": "N:\\Work\\Training\\Practice\\Source\\Practice.BusinessLogic\\Practice.BusinessLogic.csproj",
         "projectName": "Practice.BusinessLogic",
-        "projectPath": "D:\\Test\\Skill\\Source\\Practice.BusinessLogic\\Practice.BusinessLogic.csproj",
-        "packagesPath": "C:\\Users\\skh\\.nuget\\packages\\",
-        "outputPath": "D:\\Test\\Skill\\Source\\Practice.BusinessLogic\\obj\\",
+        "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.BusinessLogic\\Practice.BusinessLogic.csproj",
+        "packagesPath": "C:\\Users\\BalLy'\\.nuget\\packages\\",
+        "outputPath": "N:\\Work\\Training\\Practice\\Source\\Practice.BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\skh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BalLy'\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,14 +30,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj": {
-                "projectPath": "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj"
+              "N:\\Work\\Training\\Practice\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj": {
+                "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj"
               },
-              "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj": {
-                "projectPath": "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj"
+              "N:\\Work\\Training\\Practice\\Source\\Practice.Domain\\Practice.Domain.csproj": {
+                "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.Domain\\Practice.Domain.csproj"
               },
-              "D:\\Test\\Skill\\Source\\Practice.Repository\\Practice.Repository.csproj": {
-                "projectPath": "D:\\Test\\Skill\\Source\\Practice.Repository\\Practice.Repository.csproj"
+              "N:\\Work\\Training\\Practice\\Source\\Practice.Repository\\Practice.Repository.csproj": {
+                "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.Repository\\Practice.Repository.csproj"
               }
             }
           }
@@ -50,6 +50,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.6.2, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -65,24 +75,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj": {
+    "N:\\Work\\Training\\Practice\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj",
+        "projectUniqueName": "N:\\Work\\Training\\Practice\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj",
         "projectName": "Practice.DataAccess",
-        "projectPath": "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\skh\\.nuget\\packages\\",
-        "outputPath": "D:\\Test\\Skill\\Source\\Practice.DataAccess\\obj\\",
+        "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\BalLy'\\.nuget\\packages\\",
+        "outputPath": "N:\\Work\\Training\\Practice\\Source\\Practice.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\skh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BalLy'\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,8 +105,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj": {
-                "projectPath": "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj"
+              "N:\\Work\\Training\\Practice\\Source\\Practice.Domain\\Practice.Domain.csproj": {
+                "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.Domain\\Practice.Domain.csproj"
               }
             }
           }
@@ -148,24 +158,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj": {
+    "N:\\Work\\Training\\Practice\\Source\\Practice.Domain\\Practice.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj",
+        "projectUniqueName": "N:\\Work\\Training\\Practice\\Source\\Practice.Domain\\Practice.Domain.csproj",
         "projectName": "Practice.Domain",
-        "projectPath": "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj",
-        "packagesPath": "C:\\Users\\skh\\.nuget\\packages\\",
-        "outputPath": "D:\\Test\\Skill\\Source\\Practice.Domain\\obj\\",
+        "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.Domain\\Practice.Domain.csproj",
+        "packagesPath": "C:\\Users\\BalLy'\\.nuget\\packages\\",
+        "outputPath": "N:\\Work\\Training\\Practice\\Source\\Practice.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\skh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BalLy'\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -213,24 +223,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Test\\Skill\\Source\\Practice.IoC\\Practice.IoC.csproj": {
+    "N:\\Work\\Training\\Practice\\Source\\Practice.IoC\\Practice.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Test\\Skill\\Source\\Practice.IoC\\Practice.IoC.csproj",
+        "projectUniqueName": "N:\\Work\\Training\\Practice\\Source\\Practice.IoC\\Practice.IoC.csproj",
         "projectName": "Practice.IoC",
-        "projectPath": "D:\\Test\\Skill\\Source\\Practice.IoC\\Practice.IoC.csproj",
-        "packagesPath": "C:\\Users\\skh\\.nuget\\packages\\",
-        "outputPath": "D:\\Test\\Skill\\Source\\Practice.IoC\\obj\\",
+        "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.IoC\\Practice.IoC.csproj",
+        "packagesPath": "C:\\Users\\BalLy'\\.nuget\\packages\\",
+        "outputPath": "N:\\Work\\Training\\Practice\\Source\\Practice.IoC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\skh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BalLy'\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -243,14 +253,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Test\\Skill\\Source\\Practice.BusinessLogic\\Practice.BusinessLogic.csproj": {
-                "projectPath": "D:\\Test\\Skill\\Source\\Practice.BusinessLogic\\Practice.BusinessLogic.csproj"
+              "N:\\Work\\Training\\Practice\\Source\\Practice.BusinessLogic\\Practice.BusinessLogic.csproj": {
+                "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.BusinessLogic\\Practice.BusinessLogic.csproj"
               },
-              "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj": {
-                "projectPath": "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj"
+              "N:\\Work\\Training\\Practice\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj": {
+                "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj"
               },
-              "D:\\Test\\Skill\\Source\\Practice.Repository\\Practice.Repository.csproj": {
-                "projectPath": "D:\\Test\\Skill\\Source\\Practice.Repository\\Practice.Repository.csproj"
+              "N:\\Work\\Training\\Practice\\Source\\Practice.Repository\\Practice.Repository.csproj": {
+                "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.Repository\\Practice.Repository.csproj"
               }
             }
           }
@@ -288,24 +298,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Test\\Skill\\Source\\Practice.Repository\\Practice.Repository.csproj": {
+    "N:\\Work\\Training\\Practice\\Source\\Practice.Repository\\Practice.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Test\\Skill\\Source\\Practice.Repository\\Practice.Repository.csproj",
+        "projectUniqueName": "N:\\Work\\Training\\Practice\\Source\\Practice.Repository\\Practice.Repository.csproj",
         "projectName": "Practice.Repository",
-        "projectPath": "D:\\Test\\Skill\\Source\\Practice.Repository\\Practice.Repository.csproj",
-        "packagesPath": "C:\\Users\\skh\\.nuget\\packages\\",
-        "outputPath": "D:\\Test\\Skill\\Source\\Practice.Repository\\obj\\",
+        "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.Repository\\Practice.Repository.csproj",
+        "packagesPath": "C:\\Users\\BalLy'\\.nuget\\packages\\",
+        "outputPath": "N:\\Work\\Training\\Practice\\Source\\Practice.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\skh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BalLy'\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -318,11 +328,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj": {
-                "projectPath": "D:\\Test\\Skill\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj"
+              "N:\\Work\\Training\\Practice\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj": {
+                "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.DataAccess\\Practice.DataAccess.csproj"
               },
-              "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj": {
-                "projectPath": "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj"
+              "N:\\Work\\Training\\Practice\\Source\\Practice.Domain\\Practice.Domain.csproj": {
+                "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.Domain\\Practice.Domain.csproj"
               }
             }
           }
@@ -360,24 +370,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Test\\Skill\\Source\\Practice.WebAPI\\Practice.WebAPI.csproj": {
+    "N:\\Work\\Training\\Practice\\Source\\Practice.WebAPI\\Practice.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Test\\Skill\\Source\\Practice.WebAPI\\Practice.WebAPI.csproj",
+        "projectUniqueName": "N:\\Work\\Training\\Practice\\Source\\Practice.WebAPI\\Practice.WebAPI.csproj",
         "projectName": "Practice.WebAPI",
-        "projectPath": "D:\\Test\\Skill\\Source\\Practice.WebAPI\\Practice.WebAPI.csproj",
-        "packagesPath": "C:\\Users\\skh\\.nuget\\packages\\",
-        "outputPath": "D:\\Test\\Skill\\Source\\Practice.WebAPI\\obj\\",
+        "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.WebAPI\\Practice.WebAPI.csproj",
+        "packagesPath": "C:\\Users\\BalLy'\\.nuget\\packages\\",
+        "outputPath": "N:\\Work\\Training\\Practice\\Source\\Practice.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\skh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BalLy'\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -390,17 +400,17 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Test\\Skill\\Source\\Practice.BusinessLogic\\Practice.BusinessLogic.csproj": {
-                "projectPath": "D:\\Test\\Skill\\Source\\Practice.BusinessLogic\\Practice.BusinessLogic.csproj"
+              "N:\\Work\\Training\\Practice\\Source\\Practice.BusinessLogic\\Practice.BusinessLogic.csproj": {
+                "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.BusinessLogic\\Practice.BusinessLogic.csproj"
               },
-              "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj": {
-                "projectPath": "D:\\Test\\Skill\\Source\\Practice.Domain\\Practice.Domain.csproj"
+              "N:\\Work\\Training\\Practice\\Source\\Practice.Domain\\Practice.Domain.csproj": {
+                "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.Domain\\Practice.Domain.csproj"
               },
-              "D:\\Test\\Skill\\Source\\Practice.IoC\\Practice.IoC.csproj": {
-                "projectPath": "D:\\Test\\Skill\\Source\\Practice.IoC\\Practice.IoC.csproj"
+              "N:\\Work\\Training\\Practice\\Source\\Practice.IoC\\Practice.IoC.csproj": {
+                "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.IoC\\Practice.IoC.csproj"
               },
-              "D:\\Test\\Skill\\Source\\Practice.Repository\\Practice.Repository.csproj": {
-                "projectPath": "D:\\Test\\Skill\\Source\\Practice.Repository\\Practice.Repository.csproj"
+              "N:\\Work\\Training\\Practice\\Source\\Practice.Repository\\Practice.Repository.csproj": {
+                "projectPath": "N:\\Work\\Training\\Practice\\Source\\Practice.Repository\\Practice.Repository.csproj"
               }
             }
           }
@@ -477,7 +487,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

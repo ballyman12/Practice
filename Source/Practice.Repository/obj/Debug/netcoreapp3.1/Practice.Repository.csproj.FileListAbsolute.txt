@@ -11,3 +11,17 @@ D:\Test\Skill\Source\Practice.Repository\obj\Debug\netcoreapp3.1\Practice.Reposi
 D:\Test\Skill\Source\Practice.Repository\obj\Debug\netcoreapp3.1\Practice.Repository.csproj.CopyComplete
 D:\Test\Skill\Source\Practice.Repository\obj\Debug\netcoreapp3.1\Practice.Repository.dll
 D:\Test\Skill\Source\Practice.Repository\obj\Debug\netcoreapp3.1\Practice.Repository.pdb
+N:\Work\Training\Practice\Source\Practice.Repository\bin\Debug\netcoreapp3.1\Practice.Repository.deps.json
+N:\Work\Training\Practice\Source\Practice.Repository\bin\Debug\netcoreapp3.1\Practice.Repository.dll
+N:\Work\Training\Practice\Source\Practice.Repository\bin\Debug\netcoreapp3.1\Practice.Repository.pdb
+N:\Work\Training\Practice\Source\Practice.Repository\bin\Debug\netcoreapp3.1\Practice.DataAccess.dll
+N:\Work\Training\Practice\Source\Practice.Repository\bin\Debug\netcoreapp3.1\Practice.Domain.dll
+N:\Work\Training\Practice\Source\Practice.Repository\bin\Debug\netcoreapp3.1\Practice.DataAccess.pdb
+N:\Work\Training\Practice\Source\Practice.Repository\bin\Debug\netcoreapp3.1\Practice.Domain.pdb
+N:\Work\Training\Practice\Source\Practice.Repository\obj\Debug\netcoreapp3.1\Practice.Repository.csprojAssemblyReference.cache
+N:\Work\Training\Practice\Source\Practice.Repository\obj\Debug\netcoreapp3.1\Practice.Repository.csproj.CoreCompileInputs.cache
+N:\Work\Training\Practice\Source\Practice.Repository\obj\Debug\netcoreapp3.1\Practice.Repository.AssemblyInfoInputs.cache
+N:\Work\Training\Practice\Source\Practice.Repository\obj\Debug\netcoreapp3.1\Practice.Repository.AssemblyInfo.cs
+N:\Work\Training\Practice\Source\Practice.Repository\obj\Debug\netcoreapp3.1\Practice.Repository.csproj.CopyComplete
+N:\Work\Training\Practice\Source\Practice.Repository\obj\Debug\netcoreapp3.1\Practice.Repository.dll
+N:\Work\Training\Practice\Source\Practice.Repository\obj\Debug\netcoreapp3.1\Practice.Repository.pdb

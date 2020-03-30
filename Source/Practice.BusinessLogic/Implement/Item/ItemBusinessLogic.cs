@@ -1,8 +1,12 @@
-﻿using Practice.BusinessLogic.Interface;
+﻿using Practice.BusinessLogic.Command.Result;
+using Practice.BusinessLogic.Interface;
+using Practice.DataAccess.Implementation;
+using Practice.DataAccess.Interface;
 using Practice.Domain.Model;
 using Practice.Repository.Interface;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,9 +15,11 @@ namespace Practice.BusinessLogic.Implement
     public class ItemBusinessLogic : IItemBusinessLogic
     {
         private readonly IItemRepository itemRepository;
-        public ItemBusinessLogic(IItemRepository itemRepository)
+        private readonly PracticeContext practiceContext;
+        public ItemBusinessLogic(IItemRepository itemRepository, PracticeContext practiceContext)
         {
             this.itemRepository = itemRepository;
+            this.practiceContext = practiceContext;
         }
         public void Delete(int internalId)
         {
@@ -49,9 +55,17 @@ namespace Practice.BusinessLogic.Implement
             throw new NotImplementedException();
         }
 
-        public async Task<Item> CreateItem(ItemDTO item)
+        public async Task<CommandResult> CreateItem(ItemDTO item)
         {
             if (item == null) return null;
+
+            var hasItem = practiceContext.Items.Any(c => c.Name.ToLower().Equals(item.ItemName.ToLower()));
+            if(hasItem)
+                return new CommandResult(false, $"Item {item.ItemName} has already exists");
+
+            var hasBarcode = practiceContext.Items.Any(c => c.Barcode.ToLower().Equals(item.Barcode.ToLower()));
+            if (hasBarcode)
+                return new CommandResult(false, $"Item's Barcode {item.Barcode} has already exists");
 
             var _item = new Item
             {
@@ -62,7 +76,10 @@ namespace Practice.BusinessLogic.Implement
                 Barcode = item.Barcode
             };
 
-            return await itemRepository.CreateItem(_item);
+            await itemRepository.CreateItem(_item);
+
+            item.ItemId = _item.Id;
+            return new CommandResult();
         }
     }
 }

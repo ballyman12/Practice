@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Practice.BusinessLogic.Validation.Result;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace Practice.WebAPI.Helpers
     public class APIResponseWrapper<T>
     {
         public T Data { get; set; }
-        public string Errors { get; set; }
+        public IEnumerable<object> Errors { get; set; }
         public bool IsComplete { get; set; }
 
         public static APIResponseWrapper<T> StatusComplete(T data)
@@ -20,12 +21,12 @@ namespace Practice.WebAPI.Helpers
             };
         }
 
-        public static APIResponseWrapper<T> StatusFailed(string messageFail)
+        public static APIResponseWrapper<T> StatusFailed(ValidationResult messageFail)
         {
             return new APIResponseWrapper<T>()
             {
                 IsComplete = false,
-                Errors = messageFail
+                Errors = messageFail.Errors
             };
         }
 

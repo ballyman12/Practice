@@ -1,4 +1,5 @@
-﻿using Practice.BusinessLogic.Command.Result;
+﻿using Practice.BusinessLogic.Command.Interface;
+using Practice.BusinessLogic.Command.Result;
 using Practice.BusinessLogic.Interface;
 using Practice.DataAccess.Implementation;
 using Practice.DataAccess.Interface;
@@ -21,10 +22,6 @@ namespace Practice.BusinessLogic.Implement
             this.itemRepository = itemRepository;
             this.practiceContext = practiceContext;
         }
-        public void Delete(int internalId)
-        {
-            throw new NotImplementedException();
-        }
 
         public async Task<IList<Item>> GetAllItems()
         {
@@ -35,32 +32,11 @@ namespace Practice.BusinessLogic.Implement
             return await itemRepository.GetItemById(itemId);
         }
 
-        public Task<Item> GetById(int internalId)
+        public async Task<ICommandBase> CreateItem(ItemDTO item)
         {
-            throw new NotImplementedException();
-        }
 
-        public Task<IList<Item>> GetList()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Item> Save(Item item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Item> Update(Item item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<CommandResult> CreateItem(ItemDTO item)
-        {
-            if (item == null) return null;
-
-            var hasItem = practiceContext.Items.Any(c => c.Name.ToLower().Equals(item.ItemName.ToLower()));
-            if(hasItem)
+            var hasItemName = practiceContext.Items.Any(c => c.Name.ToLower().Equals(item.ItemName.ToLower()));
+            if(hasItemName)
                 return new CommandResult(false, $"Item {item.ItemName} has already exists");
 
             var hasBarcode = practiceContext.Items.Any(c => c.Barcode.ToLower().Equals(item.Barcode.ToLower()));
@@ -79,6 +55,33 @@ namespace Practice.BusinessLogic.Implement
             await itemRepository.CreateItem(_item);
 
             item.ItemId = _item.Id;
+            return new CommandResult();
+        }
+
+        public async Task<ICommandBase> UpdateItem(ItemDTO item)
+        {
+            var _item = practiceContext.Items.FirstOrDefault(c => c.Id == item.ItemId);
+
+            if(_item == null)
+                return new CommandResult(false, "Item not found");
+
+            var hasItemName = practiceContext.Items.Any(c => c.Name.ToLower().Equals(item.ItemName.ToLower()));
+            if (hasItemName)
+                return new CommandResult(false, $"Item' name '{item.ItemName}' has already in the database");
+
+            var hasBarcode = practiceContext.Items.Any(c => c.Barcode.ToLower().Equals(item.Barcode.ToLower()));
+            if (hasBarcode)
+                return new CommandResult(false, $"Item's Barcode '{item.Barcode}' has already in ther database");
+
+            _item.Name = item.ItemName;
+            _item.SKU = item.SKU;
+            _item.Cost = item.Cost;
+            _item.Unit = item.Unit;
+            _item.Barcode = item.Barcode;
+
+
+            await itemRepository.UpdateItem(_item);
+
             return new CommandResult();
         }
     }

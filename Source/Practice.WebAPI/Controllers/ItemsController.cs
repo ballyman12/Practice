@@ -19,10 +19,12 @@ namespace Practice.WebAPI.Controllers
     public class ItemsController : BaseController
     {
         private IItemBusinessLogic itemBusinessLogic { get; }
+        private ItemValidation itemValidation { get; }
 
-        public ItemsController(IItemBusinessLogic itemBusinessLogic)
+        public ItemsController(IItemBusinessLogic itemBusinessLogic, ItemValidation itemValidation)
         {
             this.itemBusinessLogic = itemBusinessLogic;
+            this.itemValidation = itemValidation;
         }
 
         [HttpGet("GetAllItem")]
@@ -63,8 +65,7 @@ namespace Practice.WebAPI.Controllers
             if (validationResult.IsValid)
             {
                 var result = await itemBusinessLogic.CreateItem(item);
-                if(!result.Success)
-                    return APIResponse<ItemDTO>(result , StatusCodes.Status400BadRequest);
+                return APIResponse<ItemDTO>(result , StatusCodes.Status400BadRequest);
 
             }
 
@@ -79,6 +80,22 @@ namespace Practice.WebAPI.Controllers
                     SKU = item.SKU,
                     Barcode = item.Barcode
                 });
+        }
+
+        [HttpPatch("Update-item")]
+        public async Task<ActionResult<APIResponseWrapper<ICommandBase>>> UpdateItem(ItemDTO item)
+        {
+            ValidationResult validationResult = this.itemValidation.Validate(item);
+
+            if (validationResult.IsValid)
+            {
+                var result = await itemBusinessLogic.UpdateItem(item);
+                return APIResponse(result, StatusCodes.Status400BadRequest);
+
+            }
+
+
+            return APIResponse<ICommandBase>(validationResult, StatusCodes.Status400BadRequest);
         }
 
 

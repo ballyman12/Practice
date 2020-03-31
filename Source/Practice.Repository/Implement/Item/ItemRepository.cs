@@ -17,11 +17,6 @@ namespace Practice.Repository.Implement
         {
             this.practiceContext = practiceContext;
         }
-        public void Delete(int internalId)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<IList<Item>> GetAllItems()
         {
             return await practiceContext.Items.ToListAsync();
@@ -40,26 +35,14 @@ namespace Practice.Repository.Implement
             return await GetItemById(item.Id);
         }
 
-        public Task<Item> GetById(int internalId)
+        public async Task<Item> UpdateItem(Item item)
         {
-            throw new NotImplementedException();
-        }
+            if (item == null) return new Item();
 
-        
+            practiceContext.Items.Update(item);
+            practiceContext.SaveChanges();
 
-        public async Task<IList<Item>> GetList()
-        {
-            return await practiceContext.Items.ToListAsync();
-        }
-
-        public Task<Item> Save(Domain.Model.Item item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Item> Update(Domain.Model.Item item)
-        {
-            throw new NotImplementedException();
+            return await GetItemById(item.Id);
         }
     }
 }

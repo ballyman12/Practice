@@ -59,13 +59,13 @@ namespace Practice.WebAPI.Controllers
             IValidationBase<ItemDTO> itemValidation = new ItemValidation();
             ValidationResult validationResult = itemValidation.Validate(item);
 
-            
+
             if (!validationResult.IsValid)
                 return APIResponse<ItemDTO>(validationResult);
             if (validationResult.IsValid)
             {
                 var result = await itemBusinessLogic.CreateItem(item);
-                return APIResponse<ItemDTO>(result , StatusCodes.Status400BadRequest);
+                return APIResponse<ItemDTO>(result, StatusCodes.Status400BadRequest);
 
             }
 
@@ -96,6 +96,31 @@ namespace Practice.WebAPI.Controllers
 
 
             return APIResponse<ICommandBase>(validationResult, StatusCodes.Status400BadRequest);
+        }
+
+        [HttpDelete("Delete-item")]
+        public ActionResult<APIResponseWrapper<ICommandBase>> DeleteItem(int itemId)
+        {
+            var validationItemId = this.itemValidation.ValidationItemId(itemId);
+            if (!string.IsNullOrEmpty(validationItemId))
+            {
+                ValidationResult validationResult = new ValidationResult();
+                validationResult.Errors.Add(new ValidationError()
+                {
+                    AttemptedValue = itemId,
+                    ErrorMessage = validationItemId,
+                    PropertyName = "ItemId"
+                });
+
+                return APIResponse<ICommandBase>(validationResult, StatusCodes.Status400BadRequest);
+            }
+
+            var result = itemBusinessLogic.DeleteItem(itemId);
+
+            return APIResponse<ICommandBase>(result, StatusCodes.Status400BadRequest);
+
+
+
         }
 
 

@@ -44,5 +44,11 @@ namespace Practice.Repository.Implement
 
             return await GetItemById(item.Id);
         }
+
+        public void DeleteItem(Item item)
+        {
+            practiceContext.Items.Remove(item);
+            practiceContext.SaveChangesAsync();
+        }
     }
 }

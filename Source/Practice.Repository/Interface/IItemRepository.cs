@@ -12,5 +12,7 @@ namespace Practice.Repository.Interface
         Task<Item> GetItemById(int itemId);
         Task<Item> CreateItem(Item item);
         Task<Item> UpdateItem(Item item);
+        void DeleteItem(Item item);
+
     }
 }

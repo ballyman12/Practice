@@ -14,5 +14,6 @@ namespace Practice.BusinessLogic.Interface
         Task<Item> GetItemById(int itemId);
         Task<ICommandBase> CreateItem(ItemDTO item);
         Task<ICommandBase> UpdateItem(ItemDTO item);
+        ICommandBase DeleteItem(int itemId);
     }
 }

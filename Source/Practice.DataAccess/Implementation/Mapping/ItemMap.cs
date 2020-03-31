@@ -29,7 +29,7 @@ namespace Practice.DataAccess.Implementation.Mapping
             entity.HasMany(x => x.ItemSupplier)
                 .WithOne(x => x.Item)
                 .HasForeignKey(x => x.ItemId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.SetNull);
 
             return modelBuilder;
         }

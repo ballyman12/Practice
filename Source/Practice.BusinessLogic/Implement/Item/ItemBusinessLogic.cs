@@ -84,5 +84,17 @@ namespace Practice.BusinessLogic.Implement
 
             return new CommandResult();
         }
+
+        public ICommandBase DeleteItem(int itemId)
+        {
+            var _item = practiceContext.Items.FirstOrDefault(c => c.Id == itemId);
+
+            if(_item == null)
+                return new CommandResult(false, "Item not found");
+
+            itemRepository.DeleteItem(_item);
+
+            return new CommandResult();
+        }
     }
 }

@@ -51,6 +51,7 @@ namespace Practice.WebAPI.Controllers
             if (result is T data)
             {
                 apiResponse.Data = data;
+                apiResponse.IsComplete = true;
             }
 
             return apiResponse;

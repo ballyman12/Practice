@@ -18,7 +18,7 @@ namespace Practice.Repository.Implement
         }
         public async Task<IList<Order>> GetAllOrder()
         {
-            return await practiceContext.Order.ToListAsync();
+            return await practiceContext.Order.Include(c => c.OrderItems).ToListAsync();
         }
         public Task<Order> GetOrderById(int orderId)
         {

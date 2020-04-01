@@ -292,9 +292,6 @@ N:\Work\Training\Practice\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\Practic
 N:\Work\Training\Practice\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\Practice.Repository.pdb
 N:\Work\Training\Practice\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\Practice.DataAccess.pdb
 N:\Work\Training\Practice\Source\Practice.WebAPI\obj\Debug\netcoreapp3.1\Practice.WebAPI.csprojAssemblyReference.cache
-N:\Work\Training\Practice\Source\Practice.WebAPI\obj\Debug\netcoreapp3.1\Practice.WebAPI.csproj.CoreCompileInputs.cache
-N:\Work\Training\Practice\Source\Practice.WebAPI\obj\Debug\netcoreapp3.1\Practice.WebAPI.MvcApplicationPartsAssemblyInfo.cs
-N:\Work\Training\Practice\Source\Practice.WebAPI\obj\Debug\netcoreapp3.1\Practice.WebAPI.MvcApplicationPartsAssemblyInfo.cache
 N:\Work\Training\Practice\Source\Practice.WebAPI\obj\Debug\netcoreapp3.1\Practice.WebAPI.AssemblyInfoInputs.cache
 N:\Work\Training\Practice\Source\Practice.WebAPI\obj\Debug\netcoreapp3.1\Practice.WebAPI.AssemblyInfo.cs
 N:\Work\Training\Practice\Source\Practice.WebAPI\obj\Debug\netcoreapp3.1\Practice.WebAPI.RazorTargetAssemblyInfo.cache
@@ -308,3 +305,6 @@ N:\Work\Training\Practice\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\FluentV
 N:\Work\Training\Practice\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
 N:\Work\Training\Practice\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 N:\Work\Training\Practice\Source\Practice.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+N:\Work\Training\Practice\Source\Practice.WebAPI\obj\Debug\netcoreapp3.1\Practice.WebAPI.csproj.CoreCompileInputs.cache
+N:\Work\Training\Practice\Source\Practice.WebAPI\obj\Debug\netcoreapp3.1\Practice.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+N:\Work\Training\Practice\Source\Practice.WebAPI\obj\Debug\netcoreapp3.1\Practice.WebAPI.MvcApplicationPartsAssemblyInfo.cache

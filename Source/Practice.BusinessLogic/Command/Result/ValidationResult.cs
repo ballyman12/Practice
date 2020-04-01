@@ -37,15 +37,5 @@ namespace Practice.BusinessLogic.Validation.Result
             }
         }
 
-        public ValidationResult(object attemptedValue, string errorMessage, string propertyName)
-        {
-            Errors.Add(new ValidationError()
-            {
-                AttemptedValue = attemptedValue,
-                ErrorMessage = errorMessage,
-                PropertyName = propertyName
-            });
-
-        }
     }
 }

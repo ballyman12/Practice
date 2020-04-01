@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Practice.WebAPI/1.0.0": {
         "dependencies": {
+          "FluentValidation": "8.6.2",
           "Microsoft.EntityFrameworkCore.Design": "3.1.2",
           "Microsoft.EntityFrameworkCore.Relational": "3.1.2",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.0-preview1.19506.2",

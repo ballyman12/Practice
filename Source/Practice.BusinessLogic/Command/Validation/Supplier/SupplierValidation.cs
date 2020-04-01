@@ -11,19 +11,27 @@ namespace Practice.BusinessLogic.Command.Validation
     {
         public SupplierValidation()
         {
+            RuleSet("creating", Creating);
+            RuleSet("updating", Updating);
+            RuleSet("deleting", Deleting);
+        }
+
+        public void Creating()
+        {
             RuleFor(x => x.SupplierName).NotEmpty().WithMessage("Supplier's name should not empty.");
             RuleFor(x => x.SupplierAddress).NotEmpty().WithMessage("Supplier's address should more than one.");
             RuleFor(x => x.SupplierPhone).NotEmpty().WithMessage("Supplier's phone should more than one.");
         }
-
-        public string ValidationSupplierId(int supplierId)
+        public void Updating()
         {
-            if (supplierId <= 0)
-            {
-                return "Supplier's ID should not empty.";
-            }
-
-            return string.Empty;
+            RuleFor(x => x.SupplierId).NotEmpty().WithMessage("Supplier's ID should not empty.");
+            RuleFor(x => x.SupplierName).NotEmpty().WithMessage("Supplier's name should not empty.");
+            RuleFor(x => x.SupplierAddress).NotEmpty().WithMessage("Supplier's address should more than one.");
+            RuleFor(x => x.SupplierPhone).NotEmpty().WithMessage("Supplier's phone should more than one.");
+        }
+        public void Deleting()
+        {
+            RuleFor(x => x.SupplierId).NotEmpty().WithMessage("Supplier's ID should not empty.");
         }
     }
 }

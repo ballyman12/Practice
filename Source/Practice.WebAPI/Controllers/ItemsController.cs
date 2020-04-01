@@ -11,6 +11,7 @@ using Practice.BusinessLogic.Validation;
 using Practice.BusinessLogic.Validation.Result;
 using Practice.Domain.Model;
 using Practice.WebAPI.Helpers;
+using FluentValidation;
 
 namespace Practice.WebAPI.Controllers
 {
@@ -56,8 +57,10 @@ namespace Practice.WebAPI.Controllers
         [HttpPost("Create-new-item")]
         public async Task<ActionResult<APIResponseWrapper<ItemDTO>>> CreateItem(ItemDTO item)
         {
-            IValidationBase<ItemDTO> itemValidation = new ItemValidation();
-            ValidationResult validationResult = itemValidation.Validate(item);
+
+            var validation = this.itemValidation.Validate(item, ruleSet: "creating");
+
+            ValidationResult validationResult = new ValidationResult(validation);
 
 
             if (!validationResult.IsValid)
@@ -86,16 +89,11 @@ namespace Practice.WebAPI.Controllers
         [HttpPatch("Update-item")]
         public async Task<ActionResult<APIResponseWrapper<ICommandBase>>> UpdateItem(ItemDTO item)
         {
-            var validationItemId = this.itemValidation.ValidationItemId(item.ItemId);
+            
 
-            if (!string.IsNullOrEmpty(validationItemId))
-            {
-                ValidationResult validationError = new ValidationResult(item, validationItemId, "ItemId");
+            var validation = this.itemValidation.Validate(item , ruleSet: "updating");
 
-                return APIResponse<ICommandBase>(validationError);
-            }
-
-            ValidationResult validationResult = this.itemValidation.Validate(item);
+            ValidationResult validationResult = new ValidationResult(validation);
 
             if (validationResult.IsValid)
             {
@@ -111,12 +109,17 @@ namespace Practice.WebAPI.Controllers
         [HttpDelete("Delete-item")]
         public ActionResult<APIResponseWrapper<ICommandBase>> DeleteItem(int itemId)
         {
-            var errorMessage = this.itemValidation.ValidationItemId(itemId);
-            if (!string.IsNullOrEmpty(errorMessage))
-            {
-                ValidationResult validationError = new ValidationResult(itemId, errorMessage, "ItemId");
+            ItemDTO itemDTO = new ItemDTO();
+            itemDTO.ItemId = itemId;
 
-                return APIResponse<ICommandBase>(validationError);
+            var validation = this.itemValidation.Validate(itemDTO, ruleSet: "deleting");
+
+            ValidationResult validationResult = new ValidationResult(validation);
+
+            if (!validationResult.IsValid)
+            {
+                return APIResponse<ICommandBase>(validationResult);
+
             }
 
             var result = itemBusinessLogic.DeleteItem(itemId);

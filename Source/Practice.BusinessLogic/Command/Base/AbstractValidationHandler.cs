@@ -13,5 +13,10 @@ namespace Practice.BusinessLogic.Command.Base
         {
             return new ValidationResult(base.Validate(command));
         }
+
+        public ValidationResult Validate(IValidator<T> validator, T command, string ruleSet)
+        {
+            return new ValidationResult(DefaultValidatorExtensions.Validate(validator, command, ruleSet));
+        }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Practice.BusinessLogic.Command.Interface;
@@ -53,7 +54,10 @@ namespace Practice.WebAPI.Controllers
         [HttpPost("Create-supplier")]
         public async Task<ActionResult<APIResponseWrapper<SupplierDTO>>> CreateSupplier(SupplierDTO supplierDTO)
         {
-            ValidationResult validationResut = supplierValidation.Validate(supplierDTO);
+            var validation = this.supplierValidation.Validate(supplierDTO, ruleSet: "creating");
+
+            ValidationResult validationResut = new ValidationResult(validation);
+
             if (!validationResut.IsValid)
                 return APIResponse<SupplierDTO>(validationResut);
             else
@@ -76,33 +80,34 @@ namespace Practice.WebAPI.Controllers
         [HttpPatch("Update-supplier")]
         public async Task<ActionResult<APIResponseWrapper<ICommandBase>>> UpdateSupplier(SupplierDTO supplierDTO)
         {
-            ValidationResult validationResut = supplierValidation.Validate(supplierDTO);
 
-            if (validationResut.IsValid)
+            var validation = this.supplierValidation.Validate(supplierDTO, ruleSet: "updating");
+
+            ValidationResult validationResult = new ValidationResult(validation);
+
+            if (validationResult.IsValid)
             {
                 var result = await supplierBusinessLogic.UpdateSupplier(supplierDTO);
                 return APIResponse(result, StatusCodes.Status400BadRequest);
             }
 
-            return APIResponse<ICommandBase>(validationResut);
+            return APIResponse<ICommandBase>(validationResult);
         }
 
         [HttpDelete("Delete-supplier")]
         public ActionResult<APIResponseWrapper<ICommandBase>> DeleteSupplier(int supplierId)
         {
-            var errors = supplierValidation.ValidationSupplierId(supplierId);
+            SupplierDTO supplierDTO = new SupplierDTO();
+            supplierDTO.SupplierId = supplierId;
 
-            if (!string.IsNullOrEmpty(errors))
+            var validation = this.supplierValidation.Validate(supplierDTO, ruleSet: "deleting");
+
+            ValidationResult validationResult = new ValidationResult(validation);
+
+            if (!validationResult.IsValid)
             {
-                ValidationResult validationResult = new ValidationResult();
-                validationResult.Errors.Add(new ValidationError
-                {
-                    AttemptedValue = supplierId,
-                    ErrorMessage = errors,
-                    PropertyName = "SupplierId"
-                });
-
                 return APIResponse<ICommandBase>(validationResult);
+
             }
 
             var result = supplierBusinessLogic.DeleteSupplier(supplierId);

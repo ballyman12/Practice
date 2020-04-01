@@ -44,5 +44,12 @@ namespace Practice.Repository.Implement
 
             return await GetSupplierById(supplier.Id);
         }
+
+        public void DeleteSupplier(Supplier supplier)
+        {
+            practiceContext.Suppliers.Remove(supplier);
+            practiceContext.SaveChanges();
+
+        }
     }
 }

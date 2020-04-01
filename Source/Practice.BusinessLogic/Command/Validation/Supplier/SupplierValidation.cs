@@ -15,5 +15,15 @@ namespace Practice.BusinessLogic.Command.Validation
             RuleFor(x => x.SupplierAddress).NotEmpty().WithMessage("Supplier's address should more than one.");
             RuleFor(x => x.SupplierPhone).NotEmpty().WithMessage("Supplier's phone should more than one.");
         }
+
+        public string ValidationSupplierId(int supplierId)
+        {
+            if (supplierId <= 0)
+            {
+                return "Supplier's ID should not empty.";
+            }
+
+            return string.Empty;
+        }
     }
 }

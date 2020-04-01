@@ -36,5 +36,16 @@ namespace Practice.BusinessLogic.Validation.Result
                     return true;
             }
         }
+
+        public ValidationResult(object attemptedValue, string errorMessage, string propertyName)
+        {
+            Errors.Add(new ValidationError()
+            {
+                AttemptedValue = attemptedValue,
+                ErrorMessage = errorMessage,
+                PropertyName = propertyName
+            });
+
+        }
     }
 }

@@ -69,5 +69,17 @@ namespace Practice.BusinessLogic.Implement
 
             return new CommandResult();
         }
+
+        public ICommandBase DeleteSupplier(int supplierId)
+        {
+            var _supplier = practiceContext.Suppliers.FirstOrDefault(x => x.Id == supplierId);
+
+            if(_supplier == null)
+                return new CommandResult(false, $"Supplier not found.");
+
+            suplierRepository.DeleteSupplier(_supplier);
+
+            return new CommandResult();
+        }
     }
 }

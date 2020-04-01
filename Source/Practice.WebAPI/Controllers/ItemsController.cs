@@ -86,6 +86,15 @@ namespace Practice.WebAPI.Controllers
         [HttpPatch("Update-item")]
         public async Task<ActionResult<APIResponseWrapper<ICommandBase>>> UpdateItem(ItemDTO item)
         {
+            var validationItemId = this.itemValidation.ValidationItemId(item.ItemId);
+
+            if (!string.IsNullOrEmpty(validationItemId))
+            {
+                ValidationResult validationError = new ValidationResult(item, validationItemId, "ItemId");
+
+                return APIResponse<ICommandBase>(validationError);
+            }
+
             ValidationResult validationResult = this.itemValidation.Validate(item);
 
             if (validationResult.IsValid)
@@ -96,24 +105,18 @@ namespace Practice.WebAPI.Controllers
             }
 
 
-            return APIResponse<ICommandBase>(validationResult, StatusCodes.Status400BadRequest);
+            return APIResponse<ICommandBase>(validationResult);
         }
 
         [HttpDelete("Delete-item")]
         public ActionResult<APIResponseWrapper<ICommandBase>> DeleteItem(int itemId)
         {
-            var validationItemId = this.itemValidation.ValidationItemId(itemId);
-            if (!string.IsNullOrEmpty(validationItemId))
+            var errorMessage = this.itemValidation.ValidationItemId(itemId);
+            if (!string.IsNullOrEmpty(errorMessage))
             {
-                ValidationResult validationResult = new ValidationResult();
-                validationResult.Errors.Add(new ValidationError()
-                {
-                    AttemptedValue = itemId,
-                    ErrorMessage = validationItemId,
-                    PropertyName = "ItemId"
-                });
+                ValidationResult validationError = new ValidationResult(itemId, errorMessage, "ItemId");
 
-                return APIResponse<ICommandBase>(validationResult, StatusCodes.Status400BadRequest);
+                return APIResponse<ICommandBase>(validationError);
             }
 
             var result = itemBusinessLogic.DeleteItem(itemId);

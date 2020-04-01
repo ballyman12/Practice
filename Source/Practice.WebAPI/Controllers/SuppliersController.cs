@@ -59,7 +59,7 @@ namespace Practice.WebAPI.Controllers
             else
             {
                 var result = await supplierBusinessLogic.CreateSupplier(supplierDTO);
-                if(result is CommandResult command && !command.Success)
+                if (result is CommandResult command && !command.Success)
                     return APIResponse<SupplierDTO>(result, StatusCodes.Status400BadRequest);
 
                 return APIResponse(new SupplierDTO()
@@ -84,7 +84,30 @@ namespace Practice.WebAPI.Controllers
                 return APIResponse(result, StatusCodes.Status400BadRequest);
             }
 
-            return APIResponse<ICommandBase>(validationResut, StatusCodes.Status400BadRequest);
+            return APIResponse<ICommandBase>(validationResut);
+        }
+
+        [HttpDelete("Delete-supplier")]
+        public ActionResult<APIResponseWrapper<ICommandBase>> DeleteSupplier(int supplierId)
+        {
+            var errors = supplierValidation.ValidationSupplierId(supplierId);
+
+            if (!string.IsNullOrEmpty(errors))
+            {
+                ValidationResult validationResult = new ValidationResult();
+                validationResult.Errors.Add(new ValidationError
+                {
+                    AttemptedValue = supplierId,
+                    ErrorMessage = errors,
+                    PropertyName = "SupplierId"
+                });
+
+                return APIResponse<ICommandBase>(validationResult);
+            }
+
+            var result = supplierBusinessLogic.DeleteSupplier(supplierId);
+
+            return APIResponse(result, StatusCodes.Status400BadRequest);
         }
     }
 }

@@ -12,5 +12,6 @@ namespace Practice.Repository.Interface
         Task<Supplier> GetSupplierById(int supplierId);
         Task<Supplier> CreateSupplier(Supplier supplier);
         Task<Supplier> UpdateSupplier(Supplier supplier);
+        void DeleteSupplier(Supplier supplier);
     }
 }

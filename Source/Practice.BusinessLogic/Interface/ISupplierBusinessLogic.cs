@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Practice.Repository.Interface
+namespace Practice.BusinessLogic.Interface
 {
-    public interface ISupplierRepository : IRepositoryBase<Supplier>
+    public interface ISupplierBusinessLogic : IBusinessLogicBase<Supplier>
     {
-        Task<IList<Supplier>> GetAllSupplier();
+        Task<IList<Supplier>> GetAllSuppliers();
         Task<Supplier> GetSupplierById(int supplierId);
     }
 }

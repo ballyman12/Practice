@@ -15,10 +15,12 @@ namespace Practice.BusinessLogic.Implement
     {
         private readonly IOrderRepository orderRepository;
         private readonly IItemRepository itemRepository;
+        private readonly ISupplierRepository supplierRepository;
         private readonly PracticeContext practiceContext;
-        public OrderBusinessLogic(IItemRepository itemRepository, IOrderRepository orderRepository, PracticeContext practiceContext)
+        public OrderBusinessLogic(IItemRepository itemRepository, ISupplierRepository supplierRepository, IOrderRepository orderRepository, PracticeContext practiceContext)
         {
             this.itemRepository = itemRepository;
+            this.supplierRepository = supplierRepository;
             this.orderRepository = orderRepository;
             this.practiceContext = practiceContext;
         }
@@ -38,6 +40,9 @@ namespace Practice.BusinessLogic.Implement
 
             foreach (var order in orders)
             {
+                var supplier = await supplierRepository.GetSupplierById(order.SupplierId);
+                order.Supplier = supplier;
+
                 foreach (var orderItem in order.OrderItems)
                 {
                     var item = await itemRepository.GetItemById(orderItem.ItemId);
@@ -57,7 +62,7 @@ namespace Practice.BusinessLogic.Implement
             throw new NotImplementedException();
         }
 
-        public Task<ICommandBase> UpdateOrder(ItemDTO item)
+        public Task<ICommandBase> UpdateOrder(OrderDTO oder)
         {
             throw new NotImplementedException();
         }

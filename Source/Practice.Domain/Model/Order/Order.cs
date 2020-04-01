@@ -12,16 +12,16 @@ namespace Practice.Domain.Model
         public Supplier Supplier { get; set; }
         public List<OrderItem> OrderItems { get; set; }
 
-        public OrderDTO ToOrderDTO()
+        public OrderDTO ToOrderDTO(Order order)
         {
             var orderItems = new List<OrderItemDTO>();
-            var tt = this.OrderItems;
-            orderItems.AddRange(this.OrderItems.Select(c => c.ToOrderItemDTO()));
+ 
+            orderItems.AddRange(order.OrderItems.Select(c => c.ToOrderItemDTO(c)));
             return new OrderDTO()
             {
-                OrderId = Id,
-                OrderName = Name,
-                SupplierName = "Ball",
+                OrderId = order.Id,
+                OrderName = order.Name,   
+                SupplierName = order.Supplier?.Name,
                 OrderItemsDTO = orderItems
             };
         }

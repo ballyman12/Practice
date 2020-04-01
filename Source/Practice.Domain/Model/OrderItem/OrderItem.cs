@@ -11,13 +11,13 @@ namespace Practice.Domain.Model
         public Order Order { get; set; }
         public int ItemId { get; set; }
         public Item Item { get; set; }
-        public OrderItemDTO ToOrderItemDTO()
+        public OrderItemDTO ToOrderItemDTO(OrderItem orderItem)
         {
             return new OrderItemDTO()
             {
-                ItemId = ItemId,
-                ItemName = Item.Name,
-                ItemCost = Item.Cost
+                ItemId = orderItem.ItemId,
+                ItemName = orderItem.Item?.Name,
+                ItemCost = orderItem.Item.Cost
             };
         }
 

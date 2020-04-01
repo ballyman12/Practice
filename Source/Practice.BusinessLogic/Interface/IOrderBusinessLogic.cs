@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Practice.BusinessLogic.Interface
 {
-    public interface IOrderBusinessLogic
+    public interface IOrderBusinessLogic : IBusinessLogicBase<Order>
     {
         Task<IList<Order>> GetAllOrders();
-        Task<Order> GetOrderById(int itemId);
-        Task<ICommandBase> CreateOrder(OrderDTO item);
-        Task<ICommandBase> UpdateOrder(ItemDTO item);
-        ICommandBase DeleteOrder(int itemId);
+        Task<Order> GetOrderById(int orderId);
+        Task<ICommandBase> CreateOrder(OrderDTO order);
+        Task<ICommandBase> UpdateOrder(OrderDTO order);
+        ICommandBase DeleteOrder(int orderId);
     }
 }

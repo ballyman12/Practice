@@ -26,7 +26,7 @@ namespace Practice.WebAPI.Controllers
             var orders = await orderBusinessLogic.GetAllOrders();
             if (orders.Count == 0) return NotFound();
 
-            var orderDTO = orders.Select(c => c.ToOrderDTO()).ToArray();
+            var orderDTO = orders.Select(c => c.ToOrderDTO(c)).ToArray();
 
             return APIResponse(orderDTO);
         }

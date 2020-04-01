@@ -52,6 +52,9 @@ namespace Practice.WebAPI
             services.AddTransient<IOrderRepository, OrderRepository>();
             services.AddTransient<IOrderBusinessLogic, OrderBusinessLogic>();
 
+            services.AddTransient<ISupplierRepository, SupplierRepository>();
+            services.AddTransient<ISupplierBusinessLogic, SupplierBusinessLogic>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });

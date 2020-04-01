@@ -71,8 +71,20 @@ namespace Practice.WebAPI.Controllers
                 });
             }
 
+        }
 
+        [HttpPatch("Update-supplier")]
+        public async Task<ActionResult<APIResponseWrapper<ICommandBase>>> UpdateSupplier(SupplierDTO supplierDTO)
+        {
+            ValidationResult validationResut = supplierValidation.Validate(supplierDTO);
 
+            if (validationResut.IsValid)
+            {
+                var result = await supplierBusinessLogic.UpdateSupplier(supplierDTO);
+                return APIResponse(result, StatusCodes.Status400BadRequest);
+            }
+
+            return APIResponse<ICommandBase>(validationResut, StatusCodes.Status400BadRequest);
         }
     }
 }

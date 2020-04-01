@@ -36,9 +36,13 @@ namespace Practice.Repository.Implement
 
             return await GetSupplierById(supplier.Id);
 
+        }
+        public async Task<Supplier> UpdateSupplier(Supplier supplier)
+        {
+            practiceContext.Suppliers.Update(supplier);
+            practiceContext.SaveChanges();
 
-
-
+            return await GetSupplierById(supplier.Id);
         }
     }
 }

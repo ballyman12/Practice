@@ -51,7 +51,7 @@ namespace Practice.WebAPI.Controllers
             if (result is T data)
             {
                 apiResponse.Data = data;
-                apiResponse.IsComplete = true;
+                apiResponse.IsComplete = HttpContext.Response.StatusCode == StatusCodes.Status200OK ? true : false ;
             }
 
             return apiResponse;

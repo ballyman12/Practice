@@ -11,5 +11,6 @@ namespace Practice.Repository.Interface
         Task<IList<Supplier>> GetAllSupplier();
         Task<Supplier> GetSupplierById(int supplierId);
         Task<Supplier> CreateSupplier(Supplier supplier);
+        Task<Supplier> UpdateSupplier(Supplier supplier);
     }
 }

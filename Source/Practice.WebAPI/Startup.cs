@@ -95,7 +95,7 @@ namespace Practice.WebAPI
                         practiceContext.EnsureSeeded();
                     }
                 }
-                catch (SqlException c)
+                catch (SqlException)
                 {
                     
                 }

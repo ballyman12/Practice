@@ -65,11 +65,11 @@ namespace Practice.BusinessLogic.Implement
             if(_item == null)
                 return new CommandResult(false, "Item not found");
 
-            var hasItemName = practiceContext.Items.Any(c => c.Name.ToLower().Equals(item.ItemName.ToLower()));
+            var hasItemName = practiceContext.Items.Any(c => c.Name.ToLower().Equals(item.ItemName.ToLower()) && c.Id != item.ItemId);
             if (hasItemName)
                 return new CommandResult(false, $"Item' name '{item.ItemName}' has already in the database");
 
-            var hasBarcode = practiceContext.Items.Any(c => c.Barcode.ToLower().Equals(item.Barcode.ToLower()));
+            var hasBarcode = practiceContext.Items.Any(c => c.Barcode.ToLower().Equals(item.Barcode.ToLower()) && c.Id != item.ItemId);
             if (hasBarcode)
                 return new CommandResult(false, $"Item's Barcode '{item.Barcode}' has already in ther database");
 

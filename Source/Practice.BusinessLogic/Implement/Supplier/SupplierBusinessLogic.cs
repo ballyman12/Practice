@@ -50,5 +50,24 @@ namespace Practice.BusinessLogic.Implement
             return new CommandResult();
 
         }
+
+        public async Task<ICommandBase> UpdateSupplier(SupplierDTO supplier)
+        {
+            var _supplier = practiceContext.Suppliers.FirstOrDefault(x => x.Id == supplier.SupplierId);
+            if(_supplier == null)
+                return new CommandResult(false, $"Supplier not found.");
+
+            var hasSupplierName = practiceContext.Suppliers.Any(x => x.Name.ToLower().Equals(supplier.SupplierName.ToLower()) && x.Id != supplier.SupplierId);
+            if (hasSupplierName)
+                return new CommandResult(false, $"Supplier's name '{supplier.SupplierName}' has already exists");
+
+            _supplier.Name = supplier.SupplierName;
+            _supplier.Address = supplier.SupplierAddress;
+            _supplier.PhoneNo = supplier.SupplierPhone;
+
+            await suplierRepository.UpdateSupplier(_supplier);
+
+            return new CommandResult();
+        }
     }
 }

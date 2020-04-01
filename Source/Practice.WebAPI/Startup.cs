@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Practice.BusinessLogic.Command.Validation;
 using Practice.BusinessLogic.Implement;
 using Practice.BusinessLogic.Interface;
 using Practice.BusinessLogic.Validation;
@@ -54,6 +55,7 @@ namespace Practice.WebAPI
 
             services.AddTransient<ISupplierRepository, SupplierRepository>();
             services.AddTransient<ISupplierBusinessLogic, SupplierBusinessLogic>();
+            services.AddTransient<SupplierValidation>();
 
             services.AddSwaggerGen(c =>
             {

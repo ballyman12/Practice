@@ -1,4 +1,5 @@
-﻿using Practice.Domain.Model;
+﻿using Practice.BusinessLogic.Command.Interface;
+using Practice.Domain.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,5 +11,6 @@ namespace Practice.BusinessLogic.Interface
     {
         Task<IList<Supplier>> GetAllSuppliers();
         Task<Supplier> GetSupplierById(int supplierId);
+        Task<ICommandBase> CreateSupplier(SupplierDTO supplier);
     }
 }

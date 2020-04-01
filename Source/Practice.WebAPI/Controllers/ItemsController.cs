@@ -65,7 +65,8 @@ namespace Practice.WebAPI.Controllers
             if (validationResult.IsValid)
             {
                 var result = await itemBusinessLogic.CreateItem(item);
-                return APIResponse<ItemDTO>(result, StatusCodes.Status400BadRequest);
+                if (result is CommandResult command && !command.Success)
+                    return APIResponse<ItemDTO>(result, StatusCodes.Status400BadRequest);
 
             }
 

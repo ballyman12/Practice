@@ -2,7 +2,6 @@
 using Practice.BusinessLogic.Interface;
 using Practice.DataAccess.Implementation;
 using Practice.Domain.Model;
-using Practice.Domain.Result;
 using Practice.Domain.Result.Interface;
 using Practice.Repository.Interface;
 using System;
@@ -19,41 +18,13 @@ namespace Practice.BusinessLogic.Implement
         private readonly IItemRepository itemRepository;
         private readonly ISupplierRepository supplierRepository;
         private readonly IOrderItemRepository orderItemRepository;
-        private readonly PracticeContext practiceContext;
-        public OrderBusinessLogic(IItemRepository itemRepository, ISupplierRepository supplierRepository, IOrderRepository orderRepository, PracticeContext practiceContext , IOrderItemRepository orderItemRepository)
+        public OrderBusinessLogic(IItemRepository itemRepository, ISupplierRepository supplierRepository, IOrderRepository orderRepository, IOrderItemRepository orderItemRepository)
         {
             this.itemRepository = itemRepository;
             this.supplierRepository = supplierRepository;
             this.orderRepository = orderRepository;
             this.orderItemRepository = orderItemRepository;
-            this.practiceContext = practiceContext;
         }
-        public async Task<ICommandBase> CreateOrder(OrderCreateCommand order)
-        {
-            var hasOrderName = practiceContext.Order.Any(c => c.Name.ToLower().Equals(order.OrderName.ToLower()));
-            if (hasOrderName)
-                return new CommandResult(false, $"Order's name {order.OrderName} has already exists");
-
-            var _order = new Order
-            {
-                Name = order.OrderName,
-                SupplierId = order.SupplierId
-
-            };
-
-            await orderRepository.CreateOrder(_order);
-
-            await orderItemRepository.UpdateOrdertem(order.ItemsId, _order.Id);
-
-            order.OrderId = _order.Id;
-            return new CommandResult();
-        }
-
-        public ICommandBase DeleteOrder(int itemId)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<IList<Order>> GetAllOrders()
         {
             var orders = await orderRepository.GetAllOrder();
@@ -93,25 +64,43 @@ namespace Practice.BusinessLogic.Implement
 
             return order;
         }
+        public async Task<ICommandBase> CreateOrder(OrderCreateCommand order)
+        {
 
+            var _order = new Order
+            {
+                Name = order.OrderName,
+                SupplierId = order.SupplierId
+
+            };
+
+            var result = await orderRepository.CreateOrder(_order);
+            await orderItemRepository.UpdateOrdertem(order.ItemsId, _order.Id);
+
+            order.OrderId = _order.Id;
+
+            return result;
+        }
         public async Task<ICommandBase> UpdateOrder(OrderCreateCommand order)
         {
-            var _order = practiceContext.Order.FirstOrDefault(x => x.Id == order.OrderId);
-            if(_order == null) return new CommandResult(false, $"Order not found.");
 
+            var _order = new Order
+            {
+                Id = order.OrderId,
+                Name = order.OrderName,
+                SupplierId = order.SupplierId
 
-            var hasOrderName = practiceContext.Order.Any(c => c.Name.ToLower().Equals(order.OrderName.ToLower()) && c.Id != order.OrderId);
-            if (hasOrderName)
-                return new CommandResult(false, $"Order's name {order.OrderName} has already exists");
+            };
 
-            _order.Name = order.OrderName;
-            _order.SupplierId = order.SupplierId;
-
-            await orderRepository.UpdateOrder(_order);
+            var result = await orderRepository.UpdateOrder(_order);
 
             await orderItemRepository.UpdateOrdertem(order.ItemsId, _order.Id);
 
-            return new CommandResult();
+            return result;
+        }
+        public ICommandBase DeleteOrder(int itemId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

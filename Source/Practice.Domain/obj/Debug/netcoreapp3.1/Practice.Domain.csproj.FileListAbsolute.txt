@@ -20,7 +20,6 @@ D:\Test\Skill\Source\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.csp
 N:\Work\Training\Practice\Source\Practice.Domain\bin\Debug\netcoreapp3.1\Practice.Domain.deps.json
 N:\Work\Training\Practice\Source\Practice.Domain\bin\Debug\netcoreapp3.1\Practice.Domain.dll
 N:\Work\Training\Practice\Source\Practice.Domain\bin\Debug\netcoreapp3.1\Practice.Domain.pdb
-N:\Work\Training\Practice\Source\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.csprojAssemblyReference.cache
 N:\Work\Training\Practice\Source\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.AssemblyInfoInputs.cache
 N:\Work\Training\Practice\Source\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.AssemblyInfo.cs
 N:\Work\Training\Practice\Source\Practice.Domain\obj\Debug\netcoreapp3.1\Practice.Domain.dll

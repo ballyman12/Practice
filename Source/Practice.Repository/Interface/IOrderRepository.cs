@@ -1,4 +1,5 @@
 ﻿using Practice.Domain.Model;
+using Practice.Domain.Result.Interface;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,8 +11,8 @@ namespace Practice.Repository.Interface
     {
         Task<IList<Order>> GetAllOrder();
         Task<Order> GetOrderById(int orderId);
-        Task<Order> CreateOrder(Order order);
-        Task<Order> UpdateOrder(Order order);
-        void DeleteOrder(int orderId);
+        Task<ICommandBase> CreateOrder(Order order);
+        Task<ICommandBase> UpdateOrder(Order order);
+        Task<ICommandBase> DeleteOrder(int orderId);
     }
 }

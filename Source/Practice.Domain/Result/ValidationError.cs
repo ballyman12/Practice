@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Practice.BusinessLogic.Validation.Result
+namespace Practice.Domain.Result
 {
     public class ValidationError
     {

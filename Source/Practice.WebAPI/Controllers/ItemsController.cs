@@ -4,14 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Practice.BusinessLogic.Command.Interface;
-using Practice.BusinessLogic.Command.Result;
 using Practice.BusinessLogic.Interface;
 using Practice.BusinessLogic.Validation;
-using Practice.BusinessLogic.Validation.Result;
 using Practice.Domain.Model;
 using Practice.WebAPI.Helpers;
 using FluentValidation;
+using Practice.Domain.Result;
+using Practice.Domain.Result.Interface;
 
 namespace Practice.WebAPI.Controllers
 {
@@ -107,7 +106,7 @@ namespace Practice.WebAPI.Controllers
         }
 
         [HttpDelete("Delete-item")]
-        public ActionResult<APIResponseWrapper<ICommandBase>> DeleteItem(int itemId)
+        public async Task<ActionResult<APIResponseWrapper<ICommandBase>>> DeleteItemAsync(int itemId)
         {
             ItemDTO itemDTO = new ItemDTO();
             itemDTO.ItemId = itemId;
@@ -122,7 +121,7 @@ namespace Practice.WebAPI.Controllers
 
             }
 
-            var result = itemBusinessLogic.DeleteItem(itemId);
+            var result = await itemBusinessLogic.DeleteItem(itemId);
 
             return APIResponse<ICommandBase>(result, StatusCodes.Status400BadRequest);
 

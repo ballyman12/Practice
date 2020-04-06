@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Practice.BusinessLogic.Command.Interface;
+using Practice.Domain.Result.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Practice.BusinessLogic.Command.Result
+namespace Practice.Domain.Result
 {
     public class CommandResult : ICommandBase
     {

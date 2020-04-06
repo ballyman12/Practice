@@ -1,6 +1,6 @@
-﻿using Practice.BusinessLogic.Command.Interface;
-using Practice.BusinessLogic.Command.Result;
+﻿
 using Practice.Domain.Model;
+using Practice.Domain.Result.Interface;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,6 +14,6 @@ namespace Practice.BusinessLogic.Interface
         Task<Item> GetItemById(int itemId);
         Task<ICommandBase> CreateItem(ItemDTO item);
         Task<ICommandBase> UpdateItem(ItemDTO item);
-        ICommandBase DeleteItem(int itemId);
+        Task<ICommandBase> DeleteItem(int itemId);
     }
 }

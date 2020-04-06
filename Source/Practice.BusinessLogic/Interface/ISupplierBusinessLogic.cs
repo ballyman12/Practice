@@ -1,5 +1,6 @@
-﻿using Practice.BusinessLogic.Command.Interface;
+﻿
 using Practice.Domain.Model;
+using Practice.Domain.Result.Interface;
 using System;
 using System.Collections.Generic;
 using System.Text;

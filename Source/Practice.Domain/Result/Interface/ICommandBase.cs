@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Practice.BusinessLogic.Command.Interface
+namespace Practice.Domain.Result.Interface
 {
     public interface ICommandBase
     {

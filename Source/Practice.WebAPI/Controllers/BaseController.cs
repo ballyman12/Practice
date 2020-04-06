@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Practice.BusinessLogic.Command.Interface;
-using Practice.BusinessLogic.Command.Result;
-using Practice.BusinessLogic.Validation.Result;
+using Practice.Domain.Result;
+using Practice.Domain.Result.Interface;
 using Practice.WebAPI.Helpers;
 using System;
 using System.Collections.Generic;

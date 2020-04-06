@@ -1,4 +1,5 @@
-﻿using Practice.BusinessLogic.Validation.Result;
+﻿
+using Practice.Domain.Result;
 using System;
 using System.Collections.Generic;
 using System.Linq;

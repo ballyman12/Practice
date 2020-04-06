@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
-using Practice.BusinessLogic.Command.Interface;
-using Practice.BusinessLogic.Validation.Result;
+using Practice.Domain.Result;
+using Practice.Domain.Result.Interface;
 using System;
 using System.Collections.Generic;
 using System.Text;

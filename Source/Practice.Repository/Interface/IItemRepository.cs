@@ -1,4 +1,5 @@
 ﻿using Practice.Domain.Model;
+using Practice.Domain.Result.Interface;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,9 +11,9 @@ namespace Practice.Repository.Interface
     {
         Task<IList<Item>> GetAllItems();
         Task<Item> GetItemById(int itemId);
-        Task<Item> CreateItem(Item item);
-        Task<Item> UpdateItem(Item item);
-        void DeleteItem(Item item);
+        Task<ICommandBase> CreateItem(ItemDTO item);
+        Task<ICommandBase> UpdateItem(ItemDTO item);
+        Task<ICommandBase> DeleteItem(int itemId);
 
     }
 }

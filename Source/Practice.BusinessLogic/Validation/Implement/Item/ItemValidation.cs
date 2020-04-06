@@ -1,6 +1,5 @@
 ﻿using FluentValidation;
 using Practice.BusinessLogic.Command.Base;
-using Practice.BusinessLogic.Command.Interface;
 using Practice.Domain.Model;
 using System;
 using System.Collections.Generic;

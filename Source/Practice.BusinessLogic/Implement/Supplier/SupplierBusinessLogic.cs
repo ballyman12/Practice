@@ -1,8 +1,9 @@
-﻿using Practice.BusinessLogic.Command.Interface;
-using Practice.BusinessLogic.Command.Result;
+﻿
 using Practice.BusinessLogic.Interface;
 using Practice.DataAccess.Implementation;
 using Practice.Domain.Model;
+using Practice.Domain.Result;
+using Practice.Domain.Result.Interface;
 using Practice.Repository.Interface;
 using System;
 using System.Collections.Generic;

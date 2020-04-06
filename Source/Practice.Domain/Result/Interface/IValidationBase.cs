@@ -1,9 +1,8 @@
-﻿using Practice.BusinessLogic.Validation.Result;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Practice.BusinessLogic.Command.Interface
+namespace Practice.Domain.Result.Interface
 {
     public interface IValidationBase<T>
     {

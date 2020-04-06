@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Practice.BusinessLogic.Command.Interface;
-using Practice.BusinessLogic.Command.Result;
+
 using Practice.BusinessLogic.Command.Validation;
 using Practice.BusinessLogic.Interface;
-using Practice.BusinessLogic.Validation.Result;
+
 using Practice.Domain.Model;
+using Practice.Domain.Result;
+using Practice.Domain.Result.Interface;
 using Practice.WebAPI.Helpers;
 
 namespace Practice.WebAPI.Controllers

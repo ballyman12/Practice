@@ -35,4 +35,11 @@ namespace Practice.Domain.Model
         public List<OrderItemDTO> OrderItemsDTO { get; set; }
 
     }
+    public class OrderCreateCommand
+    {
+        public int OrderId { get; set; }
+        public string OrderName { get; set; }
+        public int SupplierId { get; set; }
+        public IEnumerable<int> ItemsId { get; set; }
+    }
 }

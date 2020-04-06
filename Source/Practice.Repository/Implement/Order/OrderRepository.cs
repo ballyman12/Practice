@@ -20,13 +20,16 @@ namespace Practice.Repository.Implement
         {
             return await practiceContext.Order.Include(c => c.OrderItems).ToListAsync();
         }
-        public Task<Order> GetOrderById(int orderId)
+        public async Task<Order> GetOrderById(int orderId)
         {
-            throw new NotImplementedException();
+            return await practiceContext.Order.Include(c => c.OrderItems).FirstOrDefaultAsync(x => x.Id == orderId);
         }
-        public Task<Order> CreateOrder(Order order)
+        public async Task<Order> CreateOrder(Order order)
         {
-            throw new NotImplementedException();
+            practiceContext.Add(order);
+            await practiceContext.SaveChangesAsync();
+
+            return await GetOrderById(order.Id);
         }
 
         public void DeleteOrder(int orderId)
@@ -34,9 +37,12 @@ namespace Practice.Repository.Implement
             throw new NotImplementedException();
         }
 
-        public Task<Order> UpdateOrder(Order order)
+        public async Task<Order> UpdateOrder(Order order)
         {
-            throw new NotImplementedException();
+            practiceContext.Update(order);
+            await practiceContext.SaveChangesAsync();
+
+            return await GetOrderById(order.Id);
         }
     }
 }

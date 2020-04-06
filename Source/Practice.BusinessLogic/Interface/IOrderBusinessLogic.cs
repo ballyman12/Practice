@@ -11,8 +11,8 @@ namespace Practice.BusinessLogic.Interface
     {
         Task<IList<Order>> GetAllOrders();
         Task<Order> GetOrderById(int orderId);
-        Task<ICommandBase> CreateOrder(OrderDTO order);
-        Task<ICommandBase> UpdateOrder(OrderDTO order);
+        Task<ICommandBase> CreateOrder(OrderCreateCommand order);
+        Task<ICommandBase> UpdateOrder(OrderCreateCommand order);
         ICommandBase DeleteOrder(int orderId);
     }
 }

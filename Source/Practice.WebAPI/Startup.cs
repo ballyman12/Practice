@@ -54,6 +54,9 @@ namespace Practice.WebAPI
 
             services.AddTransient<IOrderRepository, OrderRepository>();
             services.AddTransient<IOrderBusinessLogic, OrderBusinessLogic>();
+            services.AddTransient<OrderValidation>();
+
+            services.AddTransient<IOrderItemRepository, OrderItemRepository>();
 
             services.AddTransient<ISupplierRepository, SupplierRepository>();
             services.AddTransient<ISupplierBusinessLogic, SupplierBusinessLogic>();

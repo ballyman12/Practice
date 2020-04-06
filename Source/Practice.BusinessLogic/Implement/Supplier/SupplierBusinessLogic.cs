@@ -16,11 +16,9 @@ namespace Practice.BusinessLogic.Implement
     public class SupplierBusinessLogic : ISupplierBusinessLogic
     {
         private readonly ISupplierRepository suplierRepository;
-        private readonly PracticeContext practiceContext;
-        public SupplierBusinessLogic(ISupplierRepository suplierRepository, PracticeContext practiceContext)
+        public SupplierBusinessLogic(ISupplierRepository suplierRepository)
         {
             this.suplierRepository = suplierRepository;
-            this.practiceContext = practiceContext;
         }
 
         public async Task<IList<Supplier>> GetAllSuppliers()
@@ -35,9 +33,6 @@ namespace Practice.BusinessLogic.Implement
 
         public async Task<ICommandBase> CreateSupplier(SupplierDTO supplier)
         {
-            var hasSupplierName = practiceContext.Suppliers.Any(x => x.Name.ToLower().Equals(supplier.SupplierName.ToLower()));
-            if(hasSupplierName)
-                return new CommandResult(false, $"Supplier's name '{supplier.SupplierName}' has already exists");
             var _supplier = new Supplier()
             {
                 Name = supplier.SupplierName,
@@ -45,42 +40,31 @@ namespace Practice.BusinessLogic.Implement
                 PhoneNo = supplier.SupplierPhone
             };
 
-            await suplierRepository.CreateSupplier(_supplier);
+            var result = await suplierRepository.CreateSupplier(_supplier);
             supplier.SupplierId = _supplier.Id;
 
-            return new CommandResult();
+            return result;
 
         }
 
         public async Task<ICommandBase> UpdateSupplier(SupplierDTO supplier)
         {
-            var _supplier = practiceContext.Suppliers.FirstOrDefault(x => x.Id == supplier.SupplierId);
-            if(_supplier == null)
-                return new CommandResult(false, $"Supplier not found.");
+            var _supplier = new Supplier()
+            {
+                Id = supplier.SupplierId,
+                Name = supplier.SupplierName,
+                Address = supplier.SupplierAddress,
+                PhoneNo = supplier.SupplierPhone
+            };
 
-            var hasSupplierName = practiceContext.Suppliers.Any(x => x.Name.ToLower().Equals(supplier.SupplierName.ToLower()) && x.Id != supplier.SupplierId);
-            if (hasSupplierName)
-                return new CommandResult(false, $"Supplier's name '{supplier.SupplierName}' has already exists");
+            return await suplierRepository.UpdateSupplier(_supplier);
 
-            _supplier.Name = supplier.SupplierName;
-            _supplier.Address = supplier.SupplierAddress;
-            _supplier.PhoneNo = supplier.SupplierPhone;
-
-            await suplierRepository.UpdateSupplier(_supplier);
-
-            return new CommandResult();
         }
 
-        public ICommandBase DeleteSupplier(int supplierId)
+        public async Task<ICommandBase> DeleteSupplierAsync(int supplierId)
         {
-            var _supplier = practiceContext.Suppliers.FirstOrDefault(x => x.Id == supplierId);
+            return await suplierRepository.DeleteSupplier(supplierId);
 
-            if(_supplier == null)
-                return new CommandResult(false, $"Supplier not found.");
-
-            suplierRepository.DeleteSupplier(_supplier);
-
-            return new CommandResult();
         }
     }
 }

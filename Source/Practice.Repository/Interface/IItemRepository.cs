@@ -11,8 +11,8 @@ namespace Practice.Repository.Interface
     {
         Task<IList<Item>> GetAllItems();
         Task<Item> GetItemById(int itemId);
-        Task<ICommandBase> CreateItem(ItemDTO item);
-        Task<ICommandBase> UpdateItem(ItemDTO item);
+        Task<ICommandBase> CreateItem(Item item);
+        Task<ICommandBase> UpdateItem(Item item);
         Task<ICommandBase> DeleteItem(int itemId);
 
     }

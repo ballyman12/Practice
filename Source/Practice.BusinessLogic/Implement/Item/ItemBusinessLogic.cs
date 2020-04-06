@@ -1,12 +1,11 @@
 ﻿
 using Practice.BusinessLogic.Interface;
-using Practice.DataAccess.Implementation;
-using Practice.DataAccess.Interface;
+
 using Practice.Domain.Model;
 using Practice.Domain.Result;
 using Practice.Domain.Result.Interface;
 using Practice.Repository.Interface;
-using System;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +16,6 @@ namespace Practice.BusinessLogic.Implement
     public class ItemBusinessLogic : IItemBusinessLogic
     {
         private readonly IItemRepository itemRepository;
-        private readonly PracticeContext practiceContext;
         public ItemBusinessLogic(IItemRepository itemRepository)
         {
             this.itemRepository = itemRepository;
@@ -34,14 +32,35 @@ namespace Practice.BusinessLogic.Implement
 
         public async Task<ICommandBase> CreateItem(ItemDTO item)
         {
-            return await itemRepository.CreateItem(item);
+            var _item = new Item
+            {
+                Name = item.ItemName,
+                SKU = item.SKU,
+                Cost = item.Cost,
+                Unit = item.Unit,
+                Barcode = item.Barcode
+            };
+
+            var result = await itemRepository.CreateItem(_item);
+            item.ItemId = _item.Id;
+
+            return result;
 
         }
 
         public async Task<ICommandBase> UpdateItem(ItemDTO item)
         {
+            var _item = new Item
+            {
+                Id = item.ItemId,
+                Name = item.ItemName,
+                SKU = item.SKU,
+                Cost = item.Cost,
+                Unit = item.Unit,
+                Barcode = item.Barcode
+            };
 
-            return await itemRepository.UpdateItem(item);
+            return await itemRepository.UpdateItem(_item);
 
         }
 

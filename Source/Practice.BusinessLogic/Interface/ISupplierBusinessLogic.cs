@@ -14,6 +14,6 @@ namespace Practice.BusinessLogic.Interface
         Task<Supplier> GetSupplierById(int supplierId);
         Task<ICommandBase> CreateSupplier(SupplierDTO supplier);
         Task<ICommandBase> UpdateSupplier(SupplierDTO supplier);
-        ICommandBase DeleteSupplier(int supplierId);
+        Task<ICommandBase> DeleteSupplierAsync(int supplierId);
     }
 }

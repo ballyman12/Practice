@@ -96,7 +96,7 @@ namespace Practice.WebAPI.Controllers
         }
 
         [HttpDelete("Delete-supplier")]
-        public ActionResult<APIResponseWrapper<ICommandBase>> DeleteSupplier(int supplierId)
+        public async Task<ActionResult<APIResponseWrapper<ICommandBase>>> DeleteSupplier(int supplierId)
         {
             SupplierDTO supplierDTO = new SupplierDTO();
             supplierDTO.SupplierId = supplierId;
@@ -111,7 +111,7 @@ namespace Practice.WebAPI.Controllers
 
             }
 
-            var result = supplierBusinessLogic.DeleteSupplier(supplierId);
+            var result = await supplierBusinessLogic.DeleteSupplierAsync(supplierId);
 
             return APIResponse(result, StatusCodes.Status400BadRequest);
         }
